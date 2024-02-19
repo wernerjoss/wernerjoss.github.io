@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+			<meta charset="utf-8" />
+		<title>KDE 4.9.2 - another approach | Hoernerfranzracing</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="/user/themes/myvela/images/favicon.ico" />   		<meta name="generator" content="GravCMS" />
+<meta name="description" content="KDE 4.9.2 - another approach" />
+<meta name="wpgplus_publish" content="yes" />
+<meta name="_fpp_is_published" content="1" />
+<meta name="_fpp_post_id" content="296605533782280" />
+
+		<link rel="canonical" href="./blog/kde-4-9-2-another-approach" />
+				<link rel="preload" href=/werner/user/themes/myvela/fonts/fontawesome-webfont.woff2?v=4.7.0  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-regular.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700italic.woff2  as="font" crossorigin="">
+
+																						 			 		
+																
+							<link href="/assets/d6502bb3b9720afeb16e07f83ef1b182.css" type="text/css" rel="stylesheet">
+
+			<script src="/werner/assets/a9e5ab09eff08c476502ecc0633daeb2.js"></script>
+<script>
+window.addEventListener("load", function() {
+
+	var pluginConfig = {"enabled":true,"custom":false,"position":"bottom-right","compliance":"info","palette":"gray","layout":"classic","informations":"\/werner\/impressum\/datenschutz","banner_message":"Wir setzen nur technisch notwendige Cookies - diese k\u00f6nnen nicht abgelehnt werden","banner_dismiss":"Ok","banner_accept":"","banner_policy":""};
+	var cookieconsentInitialse = {
+		"position": pluginConfig.position,
+		"theme": pluginConfig.layout,
+		"type": pluginConfig.compliance,
+
+		"content": createCookieContent(pluginConfig),
+		"palette": createCookiePalette(pluginConfig.palette)
+	}
+
+		if (pluginConfig.custom)
+	{
+		var customInitialise = JSON.parse(
+			pluginConfig.custom_config.replace(/\r?\n|\r/g,'')
+		);
+		cookieconsentInitialse = Object.assign({}, cookieconsentInitialse, customInitialise);
+	}
+
+		window.cookieconsent.initialise(cookieconsentInitialse);
+});
+
+function createCookiePalette(configPalette)
+{
+	var palette = {
+		"popup": {},
+		"button": {}
+	};
+
+	if (configPalette === "black")
+	{
+		palette.popup.background = "#000";
+		palette.button.background = "#f1d600";
+	}
+
+	if (configPalette === "white")
+	{
+		palette.popup.background = "#eaf7f7";
+		palette.popup.text = "#5c7291";
+
+		palette.button.background = "#56cbdb";
+		palette.button.text = "#ffffff";
+	}
+
+	if (configPalette === "gray")
+	{
+		palette.popup.background = "#252e39";
+		palette.button.background = "#14a7d0";
+	}
+
+	return palette;
+}
+
+function createCookieContent(config)
+{
+	var cookieContent = {};
+
+	cookieContent.message = "Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Durch die weitere Nutzung der Seite stimmen Sie der Verwendung zu.";
+	if (config.banner_message)
+	{
+		cookieContent.message = config.banner_message;
+	}
+
+	cookieContent.dismiss = "OK";
+	if (config.banner_dismiss)
+	{
+		cookieContent.dismiss = config.banner_dismiss;
+	}
+
+	cookieContent.deny = "PLUGINS.SIMPLE_COOKIE.BANNER_DENY";
+	if (config.banner_deny)
+	{
+		cookieContent.deny = config.banner_deny;
+	}
+
+
+	cookieContent.allow = "Weitere Informationen";
+	if (config.banner_accept)
+	{
+		cookieContent.allow = config.banner_accept;
+	}
+
+	cookieContent.link = "Weitere Informationen";
+	if (config.banner_policy)
+	{
+		cookieContent.link = config.banner_policy;
+	}
+
+	cookieContent.href = "https://cookiesandyou.com";
+	if (config.informations)
+	{
+		cookieContent.href = config.informations;
+	}
+
+	return cookieContent;
+}
+</script>
+<script>
+$(document).ready(function(){
+    $('a[rel="lightbox"]').featherlight({
+        openSpeed: 250,
+        closeSpeed: 250,
+        closeOnClick: 'background',
+        closeOnEsc: '1',
+        root: 'body',
+        afterContent: function() {
+            var caption = this.$currentTarget.find('img').attr('alt');
+            this.$instance.find('.caption').remove();
+            $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+        }
+    });
+});
+</script>
+
+		
+		<style>
+            .notices.yellow p::after {
+        content: "";
+        } 
+        .notices.red p::after {
+        content: "";
+        }
+        .notices.blue p::after {
+        content: "";
+        }
+        .notices.green p::after {
+        content: "";
+        } 
+                @media screen and (min-width: 1200px) {
+            .slideout-panel {
+            margin-left: 320px;
+            }
+
+            .slideout-menu {
+            display: block;
+            }
+
+            .toggle-button {
+            visibility: hidden;
+            }
+            .page-title{ 
+                margin-top: 35px;
+            }
+        }
+    </style>		</head>
+	<body>
+					<div class="main-nav" id="menu">
+			  <div class="flex-container">
+    <a href="/" class="sidebar-brand">
+              <img
+          src="/werner/user/themes/myvela/images/logo.png"
+          style="object-fit: contain;
+                          height:165px;
+                                      max-width: 100%;
+                        "
+          alt="">
+            
+    </a>
+    <div style="padding-left: 15px;margin-bottom: 0.25em;">      <h4>Hoernerfranzracing</h4>
+    <h6>Motorradsport unter Freunden</h6></div>
+</div>
+
+<nav class="sidebar-nav">
+<ul class="metismenu"  id="metismenu">
+                                                            <li>
+                <a href="/about" class="  webkitNoSelect" aria-expanded="false">
+                    About
+                </a>
+            </li>
+                                                                <li>
+                <a href="/allgemein" class="  webkitNoSelect" aria-expanded="false">
+                    Allgemeine Informationen
+                </a>
+            </li>
+                                                                <li>
+                <a href="/links" class="  webkitNoSelect" aria-expanded="false">
+                    Links
+                </a>
+            </li>
+                                                                <li class="">
+                <a href="/kde-linux-web" class="  has-arrow webkitNoSelect" aria-expanded=&quot;false&quot;>
+                    EDV / Linux /Web
+                </a>
+                <ul class="">
+                                                                            <li class="">
+                <a href="/kde-linux-web/tips-and-tricks" class="  has-arrow webkitNoSelect" aria-expanded=&quot;false&quot;>
+                    Tips &amp; Tricks
+                </a>
+                <ul class="">
+                                                                            <li>
+                <a href="/kde-linux-web/tips-and-tricks/dokumente-in-der-cloud" class="  webkitNoSelect" aria-expanded="false">
+                    Dokumente in der Cloud
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/web-development-with-grav-cms" class="  webkitNoSelect" aria-expanded="false">
+                    Web Development with GRAV Cms
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/docker-grav-xdebug" class="  webkitNoSelect" aria-expanded="false">
+                    Docker Grav Xdebug
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/vpn" class="  webkitNoSelect" aria-expanded="false">
+                    VPN
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/kde-blog" class="  webkitNoSelect" aria-expanded="false">
+                    EDV Archiv
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-ics-importer" class="  webkitNoSelect" aria-expanded="false">
+                    WP-ICS Importer
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-caldav2ics" class="  webkitNoSelect" aria-expanded="false">
+                    WP-CalDav2ICS
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/spam" class="  webkitNoSelect" aria-expanded="false">
+                    SPAM
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/gubed" class="  webkitNoSelect" aria-expanded="false">
+                    Gubed
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/ldap" class="  webkitNoSelect" aria-expanded="false">
+                    LDAP
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/email-encryption" class="  webkitNoSelect" aria-expanded="false">
+                    Email Encryption
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kalender" class="  webkitNoSelect" aria-expanded="false">
+                    Kalender
+                </a>
+            </li>
+                                                                <li>
+                <a href="/forum" class="  webkitNoSelect" aria-expanded="false">
+                    Forum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/impressum" class="  webkitNoSelect" aria-expanded="false">
+                    Impressum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/archiv" class="  webkitNoSelect" aria-expanded="false">
+                    Blog-Archiv
+                </a>
+            </li>
+            
+</ul>
+</nav>
+<div style="padding-left: 15px;margin-top: 0.1em;">
+  <div class="search-wrapper">
+    <form name="search" data-simplesearch-form>
+        <input
+            name="searchfield"
+            class="search-input"
+            aria-label="search"
+            type="text"
+             data-min="3"             required
+            placeholder="Suche …"
+            value=""
+            data-search-invalid="Bitte geben Sie mindestens 3 Zeichen ein"
+            data-search-separator=":"
+            data-search-input="/werner//search/query"
+        />
+            </form>
+</div>
+</div>
+<div style="padding-left: 15px;margin-top: 0.4em;">
+        <a class="button" href="//blog.rss"><i class="fa fa-rss-square"></i> RSS</a>
+</div>
+
+		</div>
+			
+			<main id="panel" class="slideout-panel">
+					<div class="toggle-button hamburger hamburger--spin">
+			<div class="hamburger-box">
+				<div class="hamburger-inner"></div>
+			</div>
+		</div>
+						<article class="post type-post post-excerpt format-standard hentry ">
+
+    <div class="post-thumbnail">
+                
+    </div>
+
+    <header class="entry-header">
+                    <h2 class="entry-title"><a href="/blog/kde-4-9-2-another-approach">KDE 4.9.2 - another approach</a></h2>
+            </header>
+
+    <div class="entry-content">
+                    <p>So, after having been fed up with akonadi/nepomuk Disaster in previous KDE4 Versions (and hence switched to Trinity) I decided to give it another try.<div>This was mainly triggered by recent, rather positive feedback in KDE mailinglists, which indicated, things could have been significantly improved.<br />
+So I bit the bullet and installed Kubuntu 12.04 with KDE 4.9.2 (from backports PPA) alongside my favourite Debian/Trinity on my main Desktop, which is a rather weak peace of Hardware (Dual core Intel Atom, 1.7 MHz CPU, 1 GB RAM, Intel GMA3150 Graphics), but more than ok with Trinity, in fact: this flies :D<br />
+And now, KDE 4.9.2:<br />
+Installation went rather unspectacular, Hardware fully recognized, Login/Desktop came up as expected, with default settings.<br />
+This included a rather conservative screen resolution (1024x768) which looked really ugly :-/<br />
+Instantly changed via Systemsettings, much better...<br />
+Then, as a surprise, there was no konqueror, but rekonq as Browser and Dolphin as Filemanager, instead.<br />
+Seems to be Kubuntu specific thing, though, so I installed Konqueror as a next step.<br />
+Then started Kontact to check if the KDE-PIM-mess finally has come to an end <i class="fa fas fa-smile-o"></i>.<br />
+And, yes, everything important (email, kontacts, newsfeeds) worked more or less 'out-of-the-box' after configuration/Data Import.<br />
+Even virtuoso (Backend for Nepomuk) worked directly (which was never the case for me with previous KDE Versions).<br />
+Then I decided to switch to the sqlite Backend for Akonadi (instead of running the default mysql Server, which is Bloat/Overkill, IMHO).<br />
+Seemed to be just 1 click away in Systemsettings, but after that, Akonadi stopped running and gave a bunch of error messages (missing Drivers etc...).
+Turned out I had to install package akonadi-backend-sqlite, which was not obvious, though.<br />
+Then I proceeded with Installation of some additional software like blogilo (which is a nice Blogging Program, currently used to write this Blog entry),
+and, out of curiosity, the KDE Office suite: Calligra.<br />
+This one seems slowly to reach a usable state, its predecessor, Koffice (KDE4 Version) had several times corrupted my Data Files, which was another reason to stick with Koffice 1.6 (Trinity Version), which is simple, but reliable.<br />
+What else ?  </p>
+<ul><li>Some minor annoyances, so far:</li><li>Kmail (as well as other Programs) keep asking for access to kwallet at startup, despite having activated 'always grant access'</li><li>Yakuake doesn't save settings (screen width)</li><li>everything (especially switching Windows/Desktops) is not as snappy as in Trinity, as expected, but acceptable, even on this weak Machine.</li></ul>                                              
+    </div>
+
+                
+    <footer class="entry-footer">
+        <span class="posted-on">
+                        <time class="entry-date published updated" datetime="31st Oct 2012">31.10.2012</time>
+        </span>
+        
+                            <span class="cat-links">
+                                    <a href="//category:EDV">EDV</a>
+                            </span>
+        
+            </footer>
+    
+                                                                      </article>
+
+	<div class="post">
+		<h4>Ähnliche Beiträge:</h4>
+		<ul class="related-pages">
+                                <li>
+                                <a href="/blog/2023-wireguard-evaluation" title="Wireguard Evaluation">Wireguard Evaluation</a>
+            </li>
+                                        <li>
+                                <a href="/blog/2023-my-way" title="My Way - meine IT Geschichte">My Way - meine IT Geschichte</a>
+            </li>
+                                        <li>
+                                <a href="/blog/2023-neue-grav-plugins" title="Neue Grav Plugins">Neue Grav Plugins</a>
+            </li>
+                                        <li>
+                                <a href="/blog/2023-signal-messenger-deadline" title="Signal Messenger Deadline">Signal Messenger Deadline</a>
+            </li>
+            </ul>	</div>
+
+            <style type="text/css">
+        .post-navigation .nav-next a:before { background-color: rgba(0, 0, 0, 0.4); }
+        </style>
+        
+    <nav class="navigation post-navigation" role="navigation">
+                <div class="nav-links">
+                            <div class="nav-previous" >
+                    <span class="meta-nav" aria-hidden="true" >Vorheriger Beitrag:</span>
+                    <a href="/blog/planung-2013" rel="prev">
+                                                <span class="post-title" >Planung 2013</span>
+                    </a>
+                </div>
+                                        <div class="nav-next" >
+                    <span class="meta-nav" aria-hidden="true" style="color: #fff;">Nächster Beitrag:</span>
+                    <a href="/blog/40-jahre-msa" rel="next">
+                                                <span class="post-title" style="color: #fff;">40 Jahre MSA</span>
+                    </a>
+                </div>
+                    </div>
+    </nav>
+											<a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+					</main>
+	
+		
+			<script src="/werner/assets/3c211ab80e5b4172dfc6a545e993b4fe.js"></script>
+ 		</body>
+</html>

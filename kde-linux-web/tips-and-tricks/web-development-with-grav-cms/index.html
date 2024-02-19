@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+			<meta charset="utf-8" />
+		<title>Web Development with GRAV Cms | Hoernerfranzracing</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="/user/themes/myvela/images/favicon.ico" />   		<meta name="generator" content="GravCMS" />
+<meta name="description" content="Motorradsport unter Freunden" />
+
+		<link rel="canonical" href="./kde-linux-web/tips-and-tricks/web-development-with-grav-cms" />
+				<link rel="preload" href=/werner/user/themes/myvela/fonts/fontawesome-webfont.woff2?v=4.7.0  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-regular.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700italic.woff2  as="font" crossorigin="">
+
+																						 			 		
+																
+							<link href="/assets/d6502bb3b9720afeb16e07f83ef1b182.css" type="text/css" rel="stylesheet">
+
+			<script src="/werner/assets/a9e5ab09eff08c476502ecc0633daeb2.js"></script>
+<script>
+window.addEventListener("load", function() {
+
+	var pluginConfig = {"enabled":true,"custom":false,"position":"bottom-right","compliance":"info","palette":"gray","layout":"classic","informations":"\/werner\/impressum\/datenschutz","banner_message":"Wir setzen nur technisch notwendige Cookies - diese k\u00f6nnen nicht abgelehnt werden","banner_dismiss":"Ok","banner_accept":"","banner_policy":""};
+	var cookieconsentInitialse = {
+		"position": pluginConfig.position,
+		"theme": pluginConfig.layout,
+		"type": pluginConfig.compliance,
+
+		"content": createCookieContent(pluginConfig),
+		"palette": createCookiePalette(pluginConfig.palette)
+	}
+
+		if (pluginConfig.custom)
+	{
+		var customInitialise = JSON.parse(
+			pluginConfig.custom_config.replace(/\r?\n|\r/g,'')
+		);
+		cookieconsentInitialse = Object.assign({}, cookieconsentInitialse, customInitialise);
+	}
+
+		window.cookieconsent.initialise(cookieconsentInitialse);
+});
+
+function createCookiePalette(configPalette)
+{
+	var palette = {
+		"popup": {},
+		"button": {}
+	};
+
+	if (configPalette === "black")
+	{
+		palette.popup.background = "#000";
+		palette.button.background = "#f1d600";
+	}
+
+	if (configPalette === "white")
+	{
+		palette.popup.background = "#eaf7f7";
+		palette.popup.text = "#5c7291";
+
+		palette.button.background = "#56cbdb";
+		palette.button.text = "#ffffff";
+	}
+
+	if (configPalette === "gray")
+	{
+		palette.popup.background = "#252e39";
+		palette.button.background = "#14a7d0";
+	}
+
+	return palette;
+}
+
+function createCookieContent(config)
+{
+	var cookieContent = {};
+
+	cookieContent.message = "Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Durch die weitere Nutzung der Seite stimmen Sie der Verwendung zu.";
+	if (config.banner_message)
+	{
+		cookieContent.message = config.banner_message;
+	}
+
+	cookieContent.dismiss = "OK";
+	if (config.banner_dismiss)
+	{
+		cookieContent.dismiss = config.banner_dismiss;
+	}
+
+	cookieContent.deny = "PLUGINS.SIMPLE_COOKIE.BANNER_DENY";
+	if (config.banner_deny)
+	{
+		cookieContent.deny = config.banner_deny;
+	}
+
+
+	cookieContent.allow = "Weitere Informationen";
+	if (config.banner_accept)
+	{
+		cookieContent.allow = config.banner_accept;
+	}
+
+	cookieContent.link = "Weitere Informationen";
+	if (config.banner_policy)
+	{
+		cookieContent.link = config.banner_policy;
+	}
+
+	cookieContent.href = "https://cookiesandyou.com";
+	if (config.informations)
+	{
+		cookieContent.href = config.informations;
+	}
+
+	return cookieContent;
+}
+</script>
+<script>
+$(document).ready(function(){
+    $('a[rel="lightbox"]').featherlight({
+        openSpeed: 250,
+        closeSpeed: 250,
+        closeOnClick: 'background',
+        closeOnEsc: '1',
+        root: 'body',
+        afterContent: function() {
+            var caption = this.$currentTarget.find('img').attr('alt');
+            this.$instance.find('.caption').remove();
+            $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+        }
+    });
+});
+</script>
+
+		
+		<style>
+            .notices.yellow p::after {
+        content: "";
+        } 
+        .notices.red p::after {
+        content: "";
+        }
+        .notices.blue p::after {
+        content: "";
+        }
+        .notices.green p::after {
+        content: "";
+        } 
+                @media screen and (min-width: 1200px) {
+            .slideout-panel {
+            margin-left: 320px;
+            }
+
+            .slideout-menu {
+            display: block;
+            }
+
+            .toggle-button {
+            visibility: hidden;
+            }
+            .page-title{ 
+                margin-top: 35px;
+            }
+        }
+    </style>		</head>
+	<body>
+					<div class="main-nav" id="menu">
+			  <div class="flex-container">
+    <a href="" class="sidebar-brand">
+              <img
+          src="/werner/user/themes/myvela/images/logo.png"
+          style="object-fit: contain;
+                          height:165px;
+                                      max-width: 100%;
+                        "
+          alt="">
+            
+    </a>
+    <div style="padding-left: 15px;margin-bottom: 0.25em;">      <h4>Hoernerfranzracing</h4>
+    <h6>Motorradsport unter Freunden</h6></div>
+</div>
+
+<nav class="sidebar-nav">
+<ul class="metismenu"  id="metismenu">
+                                                            <li>
+                <a href="/about" class="  webkitNoSelect" aria-expanded="false">
+                    About
+                </a>
+            </li>
+                                                                <li>
+                <a href="/allgemein" class="  webkitNoSelect" aria-expanded="false">
+                    Allgemeine Informationen
+                </a>
+            </li>
+                                                                <li>
+                <a href="/links" class="  webkitNoSelect" aria-expanded="false">
+                    Links
+                </a>
+            </li>
+                                                                <li class="mm-active">
+                <a href="/kde-linux-web" class="mm-active  has-arrow webkitNoSelect" aria-expanded=&quot;true&quot;>
+                    EDV / Linux /Web
+                </a>
+                <ul class="mm-show">
+                                                                            <li class="mm-active">
+                <a href="/kde-linux-web/tips-and-tricks" class="mm-active  has-arrow webkitNoSelect" aria-expanded=&quot;true&quot;>
+                    Tips &amp; Tricks
+                </a>
+                <ul class="mm-show">
+                                                                            <li>
+                <a href="/kde-linux-web/tips-and-tricks/dokumente-in-der-cloud" class="  webkitNoSelect" aria-expanded="false">
+                    Dokumente in der Cloud
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/web-development-with-grav-cms" class="mm-active active-page webkitNoSelect" aria-expanded="false">
+                    Web Development with GRAV Cms
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/docker-grav-xdebug" class="  webkitNoSelect" aria-expanded="false">
+                    Docker Grav Xdebug
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/vpn" class="  webkitNoSelect" aria-expanded="false">
+                    VPN
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/kde-blog" class="  webkitNoSelect" aria-expanded="false">
+                    EDV Archiv
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-ics-importer" class="  webkitNoSelect" aria-expanded="false">
+                    WP-ICS Importer
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-caldav2ics" class="  webkitNoSelect" aria-expanded="false">
+                    WP-CalDav2ICS
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/spam" class="  webkitNoSelect" aria-expanded="false">
+                    SPAM
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/gubed" class="  webkitNoSelect" aria-expanded="false">
+                    Gubed
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/ldap" class="  webkitNoSelect" aria-expanded="false">
+                    LDAP
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/email-encryption" class="  webkitNoSelect" aria-expanded="false">
+                    Email Encryption
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kalender" class="  webkitNoSelect" aria-expanded="false">
+                    Kalender
+                </a>
+            </li>
+                                                                <li>
+                <a href="/forum" class="  webkitNoSelect" aria-expanded="false">
+                    Forum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/impressum" class="  webkitNoSelect" aria-expanded="false">
+                    Impressum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/archiv" class="  webkitNoSelect" aria-expanded="false">
+                    Blog-Archiv
+                </a>
+            </li>
+            
+</ul>
+</nav>
+<div style="padding-left: 15px;margin-top: 0.1em;">
+  <div class="search-wrapper">
+    <form name="search" data-simplesearch-form>
+        <input
+            name="searchfield"
+            class="search-input"
+            aria-label="search"
+            type="text"
+             data-min="3"             required
+            placeholder="Suche …"
+            value=""
+            data-search-invalid="Bitte geben Sie mindestens 3 Zeichen ein"
+            data-search-separator=":"
+            data-search-input="/werner/search/query"
+        />
+            </form>
+</div>
+</div>
+<div style="padding-left: 15px;margin-top: 0.4em;">
+        <a class="button" href="/blog.rss"><i class="fa fa-rss-square"></i> RSS</a>
+</div>
+
+		</div>
+			
+			<main id="panel" class="slideout-panel">
+			  <div class="toggle-button hamburger hamburger--spin">
+    <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <article class="post-2 page type-page status-publish hentry">
+    <header class="entry-header">
+            </header>
+    <div class="entry-content">
+     <p>This is a short description how to set up a simple, effective Configuration to develop web sites with <a href="https://getgrav.org/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Grav</a>.
+Of course, websites can be built directly on the Live Domain by installing Grav on your Web Host following one of the recipes described on the <a href="https://learn.getgrav.org/17/basics/installation" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">official Guide</a>.<br />
+Much better, however, is to develop new Sites in a staging environment, and only deploy already working Versions to the Live Site.<br />
+This will be described here.  </p>
+<p>From my own experience, the best approach for this is using <a href="https://www.docker.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Docker</a> which can be installed on Windows (10 only!) and, of course, on Linux <i class="fa fas fa-smile-o"></i>.<br />
+In the past 2..3 years, I have done this using a local Docker Installation on my Workplace Desktop Win 10 PC, and, although this proved to be usable, it was not all that stable, and, most of all: <strong>SLOW</strong>.<br />
+This is due to docker using the Win10 WSL Linux Layer, and, mostly, the fact that Access to the Windows File System from inside the docker container is slow.<br />
+Of course, one could also work without this, but then there is the need to access the files inside the container via SSH or something else, at least: not directly.</p>
+<p>As a conclusion, I hardly recommend using a dedicated Linux box as docker host, this has proved to be the best Solution for me.<br />
+So, here are the short steps how to accomplish that using Debian 10 (Buster):</p>
+<ul>
+<li>Install Debian, be sure to include the openssh Server</li>
+<li>Install Docker following <a href="https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">this Guide</a></li>
+<li>be sure to also install docker-compose (see obove)</li>
+<li>get the latest official docker build environment from <a href="https://github.com/getgrav/docker-grav" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Github</a></li>
+<li>build the image from Dockerfile as described there: <code>docker build -t grav:latest .</code></li>
+<li>save the text listed at the end of the README to a file named docker-compose.yml in the same Directory where your Dockerfile is</li>
+</ul>
+<p>Now you are ready to fire up your grav container with</p>
+<pre><code>docker-compose up -d</code></pre>
+<p>That's it <i class="fa fas fa-smile-o"></i>.<br />
+You can now access the Grav Backend by just navigating your Browser to http://localhost:8080/admin and then configure your Backend user as desired.
+From the Backend, you can install and activate Plugins and Themes from the Grav Repository as desired, you can then find all the files in your local Folder 'grav', as configured in docker-compose.yml.<br />
+So, you are now free to adapt anything to your needs using your favourite IDE / Text Editor (I'm using <a href="https://code.visualstudio.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">VS Code</a> currently, which is also available for Linux).  </p>
+<p>This approach will work with any Desktop Environment on any Computer in your LAN, just make sure to make the File System on your Docker Host accessible from there - for Windows Clients, you can use the standard Network connections, provided you have installed and configured <a href="https://linuxconfig.org/how-to-set-up-a-samba-server-on-debian-10-buster" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Samba Server</a> .
+On Linux Clients, you may also use Samba, or NFS, or anything else suited for remote File access.  </p>
+<p>Addtional Note on Development cycles:</p>
+<ul>
+<li>as mentioned above, a good advice is to always develop on your local test Site and then deploy working Versions to your Live Domain.</li>
+<li>this can be done via simple ftp, or, more sophisticted, via synchronization Services / Tools like:</li>
+<li>sitecopy</li>
+<li>rsync</li>
+<li>git</li>
+<li>...</li>
+</ul>
+<p>if you have git available on your Live Domain, this might be the most elegant Method, there is even a <a href="https://github.com/trilbymedia/grav-plugin-git-sync" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Grav Plugin</a> available especially for that.<br />
+Another smart Solution has just been announced from the Grav Team: use of the built-in Webserver, see <a href="https://getgrav.org/blog/using-builtin-webserver" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">this Blogpost</a>.<br />
+As of 04/2021, there is also a docker-grav Clone which includes Xdebug, thus enabling much more comfortable Plugin Development, it can be found on <a href="/kde-linux-web/tips-and-tricks/docker-grav-xdebug">GitHub</a>.</p>     </div>
+
+                 
+  </article>
+										<a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+					</main>
+	
+		
+			<script src="/werner/assets/3c211ab80e5b4172dfc6a545e993b4fe.js"></script>
+ 		</body>
+</html>

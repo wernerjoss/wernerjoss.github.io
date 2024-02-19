@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+			<meta charset="utf-8" />
+		<title>Goodbye Wordpress, hello Grav ! | Hoernerfranzracing</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="/user/themes/myvela/images/favicon.ico" />   		<meta name="generator" content="GravCMS" />
+<meta name="description" content="migrating from Wordpress to Grav CMS" />
+
+		<link rel="canonical" href="./blog/goodbye-wordpress-hello-grav" />
+				<link rel="preload" href=/werner/user/themes/myvela/fonts/fontawesome-webfont.woff2?v=4.7.0  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-regular.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700italic.woff2  as="font" crossorigin="">
+
+																						 			 		
+																
+							<link href="/assets/d6502bb3b9720afeb16e07f83ef1b182.css" type="text/css" rel="stylesheet">
+
+			<script src="/werner/assets/a9e5ab09eff08c476502ecc0633daeb2.js"></script>
+<script>
+window.addEventListener("load", function() {
+
+	var pluginConfig = {"enabled":true,"custom":false,"position":"bottom-right","compliance":"info","palette":"gray","layout":"classic","informations":"\/werner\/impressum\/datenschutz","banner_message":"Wir setzen nur technisch notwendige Cookies - diese k\u00f6nnen nicht abgelehnt werden","banner_dismiss":"Ok","banner_accept":"","banner_policy":""};
+	var cookieconsentInitialse = {
+		"position": pluginConfig.position,
+		"theme": pluginConfig.layout,
+		"type": pluginConfig.compliance,
+
+		"content": createCookieContent(pluginConfig),
+		"palette": createCookiePalette(pluginConfig.palette)
+	}
+
+		if (pluginConfig.custom)
+	{
+		var customInitialise = JSON.parse(
+			pluginConfig.custom_config.replace(/\r?\n|\r/g,'')
+		);
+		cookieconsentInitialse = Object.assign({}, cookieconsentInitialse, customInitialise);
+	}
+
+		window.cookieconsent.initialise(cookieconsentInitialse);
+});
+
+function createCookiePalette(configPalette)
+{
+	var palette = {
+		"popup": {},
+		"button": {}
+	};
+
+	if (configPalette === "black")
+	{
+		palette.popup.background = "#000";
+		palette.button.background = "#f1d600";
+	}
+
+	if (configPalette === "white")
+	{
+		palette.popup.background = "#eaf7f7";
+		palette.popup.text = "#5c7291";
+
+		palette.button.background = "#56cbdb";
+		palette.button.text = "#ffffff";
+	}
+
+	if (configPalette === "gray")
+	{
+		palette.popup.background = "#252e39";
+		palette.button.background = "#14a7d0";
+	}
+
+	return palette;
+}
+
+function createCookieContent(config)
+{
+	var cookieContent = {};
+
+	cookieContent.message = "Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Durch die weitere Nutzung der Seite stimmen Sie der Verwendung zu.";
+	if (config.banner_message)
+	{
+		cookieContent.message = config.banner_message;
+	}
+
+	cookieContent.dismiss = "OK";
+	if (config.banner_dismiss)
+	{
+		cookieContent.dismiss = config.banner_dismiss;
+	}
+
+	cookieContent.deny = "PLUGINS.SIMPLE_COOKIE.BANNER_DENY";
+	if (config.banner_deny)
+	{
+		cookieContent.deny = config.banner_deny;
+	}
+
+
+	cookieContent.allow = "Weitere Informationen";
+	if (config.banner_accept)
+	{
+		cookieContent.allow = config.banner_accept;
+	}
+
+	cookieContent.link = "Weitere Informationen";
+	if (config.banner_policy)
+	{
+		cookieContent.link = config.banner_policy;
+	}
+
+	cookieContent.href = "https://cookiesandyou.com";
+	if (config.informations)
+	{
+		cookieContent.href = config.informations;
+	}
+
+	return cookieContent;
+}
+</script>
+<script>
+$(document).ready(function(){
+    $('a[rel="lightbox"]').featherlight({
+        openSpeed: 250,
+        closeSpeed: 250,
+        closeOnClick: 'background',
+        closeOnEsc: '1',
+        root: 'body',
+        afterContent: function() {
+            var caption = this.$currentTarget.find('img').attr('alt');
+            this.$instance.find('.caption').remove();
+            $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+        }
+    });
+});
+</script>
+
+		
+		<style>
+            .notices.yellow p::after {
+        content: "";
+        } 
+        .notices.red p::after {
+        content: "";
+        }
+        .notices.blue p::after {
+        content: "";
+        }
+        .notices.green p::after {
+        content: "";
+        } 
+                @media screen and (min-width: 1200px) {
+            .slideout-panel {
+            margin-left: 320px;
+            }
+
+            .slideout-menu {
+            display: block;
+            }
+
+            .toggle-button {
+            visibility: hidden;
+            }
+            .page-title{ 
+                margin-top: 35px;
+            }
+        }
+    </style>		</head>
+	<body>
+					<div class="main-nav" id="menu">
+			  <div class="flex-container">
+    <a href="/" class="sidebar-brand">
+              <img
+          src="/werner/user/themes/myvela/images/logo.png"
+          style="object-fit: contain;
+                          height:165px;
+                                      max-width: 100%;
+                        "
+          alt="">
+            
+    </a>
+    <div style="padding-left: 15px;margin-bottom: 0.25em;">      <h4>Hoernerfranzracing</h4>
+    <h6>Motorradsport unter Freunden</h6></div>
+</div>
+
+<nav class="sidebar-nav">
+<ul class="metismenu"  id="metismenu">
+                                                            <li>
+                <a href="/about" class="  webkitNoSelect" aria-expanded="false">
+                    About
+                </a>
+            </li>
+                                                                <li>
+                <a href="/allgemein" class="  webkitNoSelect" aria-expanded="false">
+                    Allgemeine Informationen
+                </a>
+            </li>
+                                                                <li>
+                <a href="/links" class="  webkitNoSelect" aria-expanded="false">
+                    Links
+                </a>
+            </li>
+                                                                <li class="">
+                <a href="/kde-linux-web" class="  has-arrow webkitNoSelect" aria-expanded=&quot;false&quot;>
+                    EDV / Linux /Web
+                </a>
+                <ul class="">
+                                                                            <li class="">
+                <a href="/kde-linux-web/tips-and-tricks" class="  has-arrow webkitNoSelect" aria-expanded=&quot;false&quot;>
+                    Tips &amp; Tricks
+                </a>
+                <ul class="">
+                                                                            <li>
+                <a href="/kde-linux-web/tips-and-tricks/dokumente-in-der-cloud" class="  webkitNoSelect" aria-expanded="false">
+                    Dokumente in der Cloud
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/web-development-with-grav-cms" class="  webkitNoSelect" aria-expanded="false">
+                    Web Development with GRAV Cms
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/docker-grav-xdebug" class="  webkitNoSelect" aria-expanded="false">
+                    Docker Grav Xdebug
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/vpn" class="  webkitNoSelect" aria-expanded="false">
+                    VPN
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/kde-blog" class="  webkitNoSelect" aria-expanded="false">
+                    EDV Archiv
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-ics-importer" class="  webkitNoSelect" aria-expanded="false">
+                    WP-ICS Importer
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-caldav2ics" class="  webkitNoSelect" aria-expanded="false">
+                    WP-CalDav2ICS
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/spam" class="  webkitNoSelect" aria-expanded="false">
+                    SPAM
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/gubed" class="  webkitNoSelect" aria-expanded="false">
+                    Gubed
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/ldap" class="  webkitNoSelect" aria-expanded="false">
+                    LDAP
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/email-encryption" class="  webkitNoSelect" aria-expanded="false">
+                    Email Encryption
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kalender" class="  webkitNoSelect" aria-expanded="false">
+                    Kalender
+                </a>
+            </li>
+                                                                <li>
+                <a href="/forum" class="  webkitNoSelect" aria-expanded="false">
+                    Forum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/impressum" class="  webkitNoSelect" aria-expanded="false">
+                    Impressum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/archiv" class="  webkitNoSelect" aria-expanded="false">
+                    Blog-Archiv
+                </a>
+            </li>
+            
+</ul>
+</nav>
+<div style="padding-left: 15px;margin-top: 0.1em;">
+  <div class="search-wrapper">
+    <form name="search" data-simplesearch-form>
+        <input
+            name="searchfield"
+            class="search-input"
+            aria-label="search"
+            type="text"
+             data-min="3"             required
+            placeholder="Suche …"
+            value=""
+            data-search-invalid="Bitte geben Sie mindestens 3 Zeichen ein"
+            data-search-separator=":"
+            data-search-input="/werner//search/query"
+        />
+            </form>
+</div>
+</div>
+<div style="padding-left: 15px;margin-top: 0.4em;">
+        <a class="button" href="//blog.rss"><i class="fa fa-rss-square"></i> RSS</a>
+</div>
+
+		</div>
+			
+			<main id="panel" class="slideout-panel">
+					<div class="toggle-button hamburger hamburger--spin">
+			<div class="hamburger-box">
+				<div class="hamburger-inner"></div>
+			</div>
+		</div>
+						<article class="post type-post post-excerpt format-standard hentry ">
+
+    <div class="post-thumbnail">
+                
+    </div>
+
+    <header class="entry-header">
+                    <h2 class="entry-title"><a href="/blog/goodbye-wordpress-hello-grav">Goodbye Wordpress, hello Grav !</a></h2>
+            </header>
+
+    <div class="entry-content">
+                    <p>As already mentioned, I have lately been working on migrating my Website from Wordpress to <a href="https://getgrav.org" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Grav</a> - first out of curiosity, later on because I became more and more convinced, this would be the better Option in the long term, due to the unique Features of Grav and the shortcomings of Wordpress - the biggest, never fixed design flaw beeing the fact to store abolute URL's in the database, and even worse, in additional places throughout the file system (although this is more commonly done by plugins, especially page builders).<br />
+Plus, admitted, I was also pissed off by the current development direction WP has taken (Gutenberg !), as well as the attitude of their staff - at least, those I had to deal with in the process of Plugin approval.<br />
+Of course, this was not just a quick task, but implied a substantial amount of work, since I had customized my Wordpress Site over the years, not only with regard to Theming, but also via Plugins, part of them adapted to my needs or even written from scratch by myself.<br />
+So, the first big Task was to somehow import the Content (Blog, Pages) from Wordpress, which turned out to be less work than expected, due to <a href="https://github.com/MihaiCiprianChezan/wordpress-import" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">this</a> Import Plugin (which required a bit of Adaption, though).<br />
+Then, I had to identify, which Grav Plugins could replace those I had been using for Wordpress, namely:</p>
+<ul>
+<li><a href="https://wordpress.org/plugins/akismet/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Akismet</a></li>
+<li><a href="https://wordpress.org/plugins/wf-cookie-consent/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Cookie Consent</a></li>
+<li><a href="https://wordpress.org/plugins/easy-custom-auto-excerpt/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Custom Auto Excerpt</a></li>
+<li><a href="https://wordpress.org/plugins/folder-gallery/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Folder Gallery</a></li>
+<li><a href="https://wordpress.org/plugins/google-sitemap-generator/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Google Sitemaps</a></li>
+<li><a href="https://wordpress.org/plugins/simple-google-icalendar-widget/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Icalendar Widget</a></li>
+<li><a href="https://wordpress.org/plugins/simple-mail-address-encoder/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Mail Address Encoder</a></li>
+<li><a href="https://wordpress.org/plugins/wp-mail-smtp/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Mail SMTP</a></li>
+<li><a href="https://wordpress.org/plugins/ninja-motd/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Ninja Motd</a></li>
+<li><a href="https://wordpress.org/plugins/osm/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Open Street Map</a></li>
+<li><a href="https://wordpress.org/plugins/srs-simple-hits-counter/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Simple Hits Counter</a></li>
+<li><a href="https://wordpress.org/plugins/simple-yearly-archive/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Simple Yearly Archive</a></li>
+<li><a href="https://wordpress.org/plugins/wp-caldav2ics/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">wp-caldav2ics</a></li>
+<li><a href="https://github.com/wernerjoss/wp-ics-importer" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">ICS Calendar</a></li>
+</ul>
+<p>Which is quite an impressive List <i class="fa fas fa-smile-o"></i>.<br />
+Luckily, I could just omit those Plugins which were dedicated to Database repair/migration/maintainance as Grav does not rely on any Database whatsoever ...<br />
+Of course, my first Approach was to just find and evaluate existing Grav Plugins, which could replace any of the above mentioned - so here is a List of what I found (and currently use) in the form of a Table:</p>
+<table id="wpgrav">
+<tr>
+<th>Wordpress</th><th>Grav</th><th>Remark(s)</th>
+</tr>
+<tr>
+<td>Akismet</td><td><a href="https://github.com/getgrav/grav-plugin-comments" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Comments</a></td><td>ReCaptcha built in</td>
+</tr>
+<tr>
+<td>Cookie Consent</td><td><a href="https://github.com/kwachu96/grav-plugin-cookies-notice" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Cookies Notice</a></td><td></td>
+</tr>
+<tr>
+<td>Custom Auto Excerpt</td><td>-</td><td>Built in (Grav)!</td>
+</tr>
+<tr>
+<td>Folder Gallery</td><td><a href="https://github.com/variar/grav-plugin-unitegallery" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Unitegallery</a></td><td></td>
+</tr>
+<tr>
+<td>Mail SMTP</td><td><a href="https://github.com/getgrav/grav-plugin-email" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Email</a></td><td>Grav Core</td>
+</tr>
+<tr>
+<td>Mail Address Encoder</td><td><a href="https://github.com/getgrav/grav-plugin-email" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Email</a></td><td>Grav Core</td>
+</tr>
+<tr>
+<td>Open Street Map</td><td><a href="https://github.com/finanalyst/grav-plugin-map-marker-leaflet" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Map Marker Leaflet</a></td><td></td>
+</tr>
+<tr>
+<td>Ninja Motd</td><td><a href="https://github.com/perlkonig/grav-plugin-fortune" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Fortune</a></td><td></td>
+</tr>
+<tr>
+<td>Simple Yearly Archive</td><td><a href="https://github.com/sommerregen/grav-plugin-archive-plus" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Archive Plus</a></td><td>Still needs some Adaption...</td>
+</tr>
+<tr>
+<td>ICS Calendar</td><td><a href="https://github.com/wernerjoss/grav-plugin-fullcalendar" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Grav Plugin Fullcalendar</a></td><td>my own Creation :)</td>
+</tr>
+<tr>
+<td>Google Sitemaps</td><td><a href="https://github.com/getgrav/grav-plugin-sitemap" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Sitemap</a></td><td></td>
+</tr>
+</table>
+<p>So, what's left from the initial List ? - Basically this:</p>
+<ul>
+<li><a href="https://wordpress.org/plugins/wp-caldav2ics/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">wp-caldav2ics</a> </li>
+<li><a href="https://wordpress.org/plugins/simple-google-icalendar-widget/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Icalendar Widget</a></li>
+<li><a href="https://wordpress.org/plugins/srs-simple-hits-counter/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Simple Hits Counter</a></li>
+</ul>
+<p>My very own Solution for automatically syncing my public CalDav Calendar to my Website, <a href="https://wordpress.org/plugins/wp-caldav2ics/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">wp-caldav2ics</a>, cannot be directly ported to Grav, as this does (currently) not have a built-in Task Scheduler like WP-Cron.<br />
+But, not a big Problem for me, as my Webhoster (Netcup) offers ssh access as well as native cron Jobs, so, all I had to do was to create a <a href="https://github.com/wernerjoss/caldav2ics" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">simple PHP Script</a> out of the WP Plugin without any User Interface which works just fine <i class="fa fas fa-smile-o"></i>.<br />
+Of course, this does not help anyone who is running their Website on a restricted Hosting without ssh/cron...<br />
+As for the Icalendar Widget, I just finished a new Grav Plugin: <a href="https://github.com/wernerjoss/grav-plugin-icalendar" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Icalendar</a> which does just what I need: provide a short List of Upcoming Events in the sidebar, no more, no less - this is now also included in the Grav Plugin Directory and can hence be installed via gpm/Admin Backend.<br />
+And, finally, I wrote a simple Replacement for the Hits Counter: <a href="https://github.com/wernerjoss/grav-plugin-ipcount" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Ipcount</a> which, admitted, still is in beta state (needs some more investigation on the count process...), also lacks a History, including graphic Presentation, so, I might add that at some point in the Future if I feel the need....<br />
+Update (02/2021): from V 1.3.0, there is now also a dayly Visitor Count History, even with optional Graphics !</p>
+<p>Of course, there are still some Improvements to be done, e.g. a full featured Multi-ICS Calendar (Done, see Link above), the still rudimentary Blog Archive and so on, so stay tuned.  </p>
+<p>As a summary, I'd like to state that, despite all the work, this was a pleasant experience, and well worth the effort.
+I learned a lot in this process, and the outcome is more than satisfying, as Grav offers some outstanding features, that Wordpress does not have, namely:</p>
+<ul>
+<li>modern Template System (Twig)</li>
+<li>Installing and maintaining 3rd Party additions via composer</li>
+<li>Plugin Development is much easier and straightforward</li>
+<li>easy Plugin / Template / Page Configuration via Frontmatter / Twig (no endless clicking-around in inconsistent Widgets)</li>
+<li>no Database hassle</li>
+<li>no more and more messed up Backend / Content Editor</li>
+<li>no increasingly spammed Backend by Plugin Ads</li>
+<li>easy to move Website around (e.g. to Subdomain or different Folder) or make Copys on another host</li>
+<li>much easier local Content Creation, then just Upload to Production Site (via ftp, sitecopy or even git)</li>
+<li>super easy Foto Gallerys: just put Image Files in corresponding Folder (Blog or Page) and you're done !</li>
+<li>friendly community <i class="fa fas fa-smile-o"></i></li>
+</ul>
+<p>And a last note about the mentioned local content creation (e.g. on a staging site, before push on live site): especially to make this even easier, I created an extra crafted Docker Image for this task - it contains all you need for Grav development - grab your copy at <a href="https://github.com/wernerjoss/grav-php-apache" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">GitHub</a>.<br />
+Ok, nowadays, I have switched to the official Grav Docker Image, see also <a href="/kde-linux-web/tips-and-tricks/web-development-with-grav-cms">this Article</a>.</p>
+<div class="notices blue">
+<p>And, as of 02/2021, here is an additional Note on the overall outcome of this decision:<br />
+I'm really glad to have switched - in fact, I have never looked back <i class="fa fas fa-smile-o"></i>.</p>
+</div>                                              
+    </div>
+
+                
+    <footer class="entry-footer">
+        <span class="posted-on">
+                        <time class="entry-date published updated" datetime="11th Apr 2019">11.04.2019</time>
+        </span>
+        
+                            <span class="cat-links">
+                                    <a href="//category:EDV">EDV</a>
+                            </span>
+        
+                    <span class="tags-links">
+                                    <a href="//tag:Wordpress">Wordpress,</a>
+                                    <a href="//tag:Grav">Grav,</a>
+                                    <a href="//tag:Grav Plugin">Grav Plugin,</a>
+                                    <a href="//tag:flat File CMS">flat File CMS</a>
+                            </span>
+            </footer>
+    
+                                                                      </article>
+
+	<div class="post">
+		<h4>Ähnliche Beiträge:</h4>
+		<ul class="related-pages">
+                                <li>
+                                <a href="/blog/2019-grav-plugin-fullcalendar" title="Grav Plugin Fullcalendar">Grav Plugin Fullcalendar</a>
+            </li>
+                                        <li>
+                                <a href="/blog/grav-package-management" title="Grav Package Management">Grav Package Management</a>
+            </li>
+                                        <li>
+                                <a href="/blog/2023-neue-grav-plugins" title="Neue Grav Plugins">Neue Grav Plugins</a>
+            </li>
+                                        <li>
+                                <a href="/blog/2021-arctic-code-vault" title="Arctic Code Vault">Arctic Code Vault</a>
+            </li>
+            </ul>	</div>
+
+                <style type="text/css">
+        .post-navigation .nav-previous a:before { background-color: rgba(0, 0, 0, 0.4); }
+        </style>
+    
+    <nav class="navigation post-navigation" role="navigation">
+                <div class="nav-links">
+                            <div class="nav-previous" >
+                    <span class="meta-nav" aria-hidden="true" style="color: #fff;">Vorheriger Beitrag:</span>
+                    <a href="/blog/sigge" rel="prev">
+                                                <span class="post-title" style="color: #fff;">Sigge †</span>
+                    </a>
+                </div>
+                                        <div class="nav-next" >
+                    <span class="meta-nav" aria-hidden="true" >Nächster Beitrag:</span>
+                    <a href="/blog/grav-package-management" rel="next">
+                                                <span class="post-title" >Grav Package Management</span>
+                    </a>
+                </div>
+                    </div>
+    </nav>
+											<a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+					</main>
+	
+		
+			<script src="/werner/assets/3c211ab80e5b4172dfc6a545e993b4fe.js"></script>
+ 		</body>
+</html>

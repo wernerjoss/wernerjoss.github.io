@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+			<meta charset="utf-8" />
+		<title>Zerotier - standortübergreifende Datensicherung | Hoernerfranzracing</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="/user/themes/myvela/images/favicon.ico" />   		<meta name="generator" content="GravCMS" />
+<meta name="description" content="Zerotier - standortübergreifende Datensicherung" />
+<meta name="_edit_last" content="1" />
+
+		<link rel="canonical" href="./blog/zerotier-standortuebergreifende-datensicherung" />
+				<link rel="preload" href=/werner/user/themes/myvela/fonts/fontawesome-webfont.woff2?v=4.7.0  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-regular.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700italic.woff2  as="font" crossorigin="">
+
+																						 			 		
+																
+							<link href="/assets/d6502bb3b9720afeb16e07f83ef1b182.css" type="text/css" rel="stylesheet">
+
+			<script src="/werner/assets/a9e5ab09eff08c476502ecc0633daeb2.js"></script>
+<script>
+window.addEventListener("load", function() {
+
+	var pluginConfig = {"enabled":true,"custom":false,"position":"bottom-right","compliance":"info","palette":"gray","layout":"classic","informations":"\/werner\/impressum\/datenschutz","banner_message":"Wir setzen nur technisch notwendige Cookies - diese k\u00f6nnen nicht abgelehnt werden","banner_dismiss":"Ok","banner_accept":"","banner_policy":""};
+	var cookieconsentInitialse = {
+		"position": pluginConfig.position,
+		"theme": pluginConfig.layout,
+		"type": pluginConfig.compliance,
+
+		"content": createCookieContent(pluginConfig),
+		"palette": createCookiePalette(pluginConfig.palette)
+	}
+
+		if (pluginConfig.custom)
+	{
+		var customInitialise = JSON.parse(
+			pluginConfig.custom_config.replace(/\r?\n|\r/g,'')
+		);
+		cookieconsentInitialse = Object.assign({}, cookieconsentInitialse, customInitialise);
+	}
+
+		window.cookieconsent.initialise(cookieconsentInitialse);
+});
+
+function createCookiePalette(configPalette)
+{
+	var palette = {
+		"popup": {},
+		"button": {}
+	};
+
+	if (configPalette === "black")
+	{
+		palette.popup.background = "#000";
+		palette.button.background = "#f1d600";
+	}
+
+	if (configPalette === "white")
+	{
+		palette.popup.background = "#eaf7f7";
+		palette.popup.text = "#5c7291";
+
+		palette.button.background = "#56cbdb";
+		palette.button.text = "#ffffff";
+	}
+
+	if (configPalette === "gray")
+	{
+		palette.popup.background = "#252e39";
+		palette.button.background = "#14a7d0";
+	}
+
+	return palette;
+}
+
+function createCookieContent(config)
+{
+	var cookieContent = {};
+
+	cookieContent.message = "Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Durch die weitere Nutzung der Seite stimmen Sie der Verwendung zu.";
+	if (config.banner_message)
+	{
+		cookieContent.message = config.banner_message;
+	}
+
+	cookieContent.dismiss = "OK";
+	if (config.banner_dismiss)
+	{
+		cookieContent.dismiss = config.banner_dismiss;
+	}
+
+	cookieContent.deny = "PLUGINS.SIMPLE_COOKIE.BANNER_DENY";
+	if (config.banner_deny)
+	{
+		cookieContent.deny = config.banner_deny;
+	}
+
+
+	cookieContent.allow = "Weitere Informationen";
+	if (config.banner_accept)
+	{
+		cookieContent.allow = config.banner_accept;
+	}
+
+	cookieContent.link = "Weitere Informationen";
+	if (config.banner_policy)
+	{
+		cookieContent.link = config.banner_policy;
+	}
+
+	cookieContent.href = "https://cookiesandyou.com";
+	if (config.informations)
+	{
+		cookieContent.href = config.informations;
+	}
+
+	return cookieContent;
+}
+</script>
+<script>
+$(document).ready(function(){
+    $('a[rel="lightbox"]').featherlight({
+        openSpeed: 250,
+        closeSpeed: 250,
+        closeOnClick: 'background',
+        closeOnEsc: '1',
+        root: 'body',
+        afterContent: function() {
+            var caption = this.$currentTarget.find('img').attr('alt');
+            this.$instance.find('.caption').remove();
+            $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+        }
+    });
+});
+</script>
+
+		
+		<style>
+            .notices.yellow p::after {
+        content: "";
+        } 
+        .notices.red p::after {
+        content: "";
+        }
+        .notices.blue p::after {
+        content: "";
+        }
+        .notices.green p::after {
+        content: "";
+        } 
+                @media screen and (min-width: 1200px) {
+            .slideout-panel {
+            margin-left: 320px;
+            }
+
+            .slideout-menu {
+            display: block;
+            }
+
+            .toggle-button {
+            visibility: hidden;
+            }
+            .page-title{ 
+                margin-top: 35px;
+            }
+        }
+    </style>		</head>
+	<body>
+					<div class="main-nav" id="menu">
+			  <div class="flex-container">
+    <a href="/" class="sidebar-brand">
+              <img
+          src="/werner/user/themes/myvela/images/logo.png"
+          style="object-fit: contain;
+                          height:165px;
+                                      max-width: 100%;
+                        "
+          alt="">
+            
+    </a>
+    <div style="padding-left: 15px;margin-bottom: 0.25em;">      <h4>Hoernerfranzracing</h4>
+    <h6>Motorradsport unter Freunden</h6></div>
+</div>
+
+<nav class="sidebar-nav">
+<ul class="metismenu"  id="metismenu">
+                                                            <li>
+                <a href="/about" class="  webkitNoSelect" aria-expanded="false">
+                    About
+                </a>
+            </li>
+                                                                <li>
+                <a href="/allgemein" class="  webkitNoSelect" aria-expanded="false">
+                    Allgemeine Informationen
+                </a>
+            </li>
+                                                                <li>
+                <a href="/links" class="  webkitNoSelect" aria-expanded="false">
+                    Links
+                </a>
+            </li>
+                                                                <li class="">
+                <a href="/kde-linux-web" class="  has-arrow webkitNoSelect" aria-expanded=&quot;false&quot;>
+                    EDV / Linux /Web
+                </a>
+                <ul class="">
+                                                                            <li class="">
+                <a href="/kde-linux-web/tips-and-tricks" class="  has-arrow webkitNoSelect" aria-expanded=&quot;false&quot;>
+                    Tips &amp; Tricks
+                </a>
+                <ul class="">
+                                                                            <li>
+                <a href="/kde-linux-web/tips-and-tricks/dokumente-in-der-cloud" class="  webkitNoSelect" aria-expanded="false">
+                    Dokumente in der Cloud
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/web-development-with-grav-cms" class="  webkitNoSelect" aria-expanded="false">
+                    Web Development with GRAV Cms
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/docker-grav-xdebug" class="  webkitNoSelect" aria-expanded="false">
+                    Docker Grav Xdebug
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/vpn" class="  webkitNoSelect" aria-expanded="false">
+                    VPN
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/kde-blog" class="  webkitNoSelect" aria-expanded="false">
+                    EDV Archiv
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-ics-importer" class="  webkitNoSelect" aria-expanded="false">
+                    WP-ICS Importer
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-caldav2ics" class="  webkitNoSelect" aria-expanded="false">
+                    WP-CalDav2ICS
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/spam" class="  webkitNoSelect" aria-expanded="false">
+                    SPAM
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/gubed" class="  webkitNoSelect" aria-expanded="false">
+                    Gubed
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/ldap" class="  webkitNoSelect" aria-expanded="false">
+                    LDAP
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/email-encryption" class="  webkitNoSelect" aria-expanded="false">
+                    Email Encryption
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kalender" class="  webkitNoSelect" aria-expanded="false">
+                    Kalender
+                </a>
+            </li>
+                                                                <li>
+                <a href="/forum" class="  webkitNoSelect" aria-expanded="false">
+                    Forum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/impressum" class="  webkitNoSelect" aria-expanded="false">
+                    Impressum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/archiv" class="  webkitNoSelect" aria-expanded="false">
+                    Blog-Archiv
+                </a>
+            </li>
+            
+</ul>
+</nav>
+<div style="padding-left: 15px;margin-top: 0.1em;">
+  <div class="search-wrapper">
+    <form name="search" data-simplesearch-form>
+        <input
+            name="searchfield"
+            class="search-input"
+            aria-label="search"
+            type="text"
+             data-min="3"             required
+            placeholder="Suche …"
+            value=""
+            data-search-invalid="Bitte geben Sie mindestens 3 Zeichen ein"
+            data-search-separator=":"
+            data-search-input="/werner//search/query"
+        />
+            </form>
+</div>
+</div>
+<div style="padding-left: 15px;margin-top: 0.4em;">
+        <a class="button" href="//blog.rss"><i class="fa fa-rss-square"></i> RSS</a>
+</div>
+
+		</div>
+			
+			<main id="panel" class="slideout-panel">
+					<div class="toggle-button hamburger hamburger--spin">
+			<div class="hamburger-box">
+				<div class="hamburger-inner"></div>
+			</div>
+		</div>
+						<article class="post type-post post-excerpt format-standard hentry ">
+
+    <div class="post-thumbnail">
+                
+    </div>
+
+    <header class="entry-header">
+                    <h2 class="entry-title"><a href="/blog/zerotier-standortuebergreifende-datensicherung">Zerotier - standortübergreifende Datensicherung</a></h2>
+            </header>
+
+    <div class="entry-content">
+                    <p>Wer hat sich nicht schonmal Gedanken darüber gemacht, was passiert, wenn der heimische Supergau eintreten sollte ?   Also sowas wie Brand, Einbruch, Wasserschaden, Vandalismus etc. wobei die lokale EDV zerstört bzw. massiv beschädigt wird.<br />
+Dann sind ggf. viele oder gar alle eigenen Daten weg, denn die eigene Datensicherung (soweit überhaupt vorhanden) ist ja auch am betroffenen Ort. (Und ja, ich weiss, man kann auch alles bei Dropbox, Google, Microsoft oder sonstwo in der Cloud speichern, dann ist es 'sicher' - aber zu welchem 'Preis' ? Und wer liest alles mit ? ...).Solche Szenarien sind zwar glücklicherweise nicht an der Tagesordnung, aber nicht unmöglich, und reale Beispiele dafür gibt es genug.   Gedanken über diese Problematik hatte ich mir ja schon lange gemacht, aber nie etwas konkretes unternommen, ausser mal sporadisch die ein oder andere DVD gebrannt und diese woanders deponiert.<br />
+Das ist zwar besser als gar nichts, aber weit entfernt von einer halbwegs aktuellen Daten-Redundanz.<br />
+Allerdings hatte ich mir schon lange mal diesen Artikel: <a href="https://www.pro-linux.de/artikel/2/1895/papierloses-b&#xFC;ro-dokumente-&#xFC;ber-mehrere-standorte-synchronisieren.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Dokumente über Standorte synchronisieren</a> angesehen, aber irgendwie nie die Zeit und Musse gefunden, das mal in der Praxis auszuprobieren.<br />
+Doch nun ist es soweit: ich habs tatsächlich getan &#128522; . Und was soll ich sagen ?<br />
+Absolut genial, die Sache, funktioniert praktisch 'out of the box' - warum habe ich das nicht schon lang gemacht ??<br />
+Das zentrale Element des Verfahrens ist <a href="https://zerotier.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Zerotier</a> - ein äussest flexibles, für privaten Einsatz kostenloses VPN, mehr dazu siehe auch den oben verlinkten Artikel.<br />
+Als Hardware für den externen Standort habe ich vorerst mal einen alten <a href="https://de.wikipedia.org/wiki/Raspberry_Pi" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Raspberry PI</a> Modell 1/B (aus 2013) mit einer externen USB Festplatte als Datenspeicher verwendet.<br />
+Auf die sichert meine automatische Datensicherung, die 1 x pro Tag läuft, alle  lokalen Daten, die seit dem letzten Lauf verändert  oder neu erzeugt wurden.<br />
+Natürlich nur dann, wenn der Raspi eingeschaltet ist (ansonsten passiert gar nichts, kein Blockieren oder Warten auf Timeouts etc.).<br />
+Die Datensicherung selber erfolgt dabei wie die auf lokale Massenspeicher auch (die ich schon bisher genauso hatte) durch einen cron-Job der ein bash Script aufruft, dessen zentrales Tool rsync ist.<br />
+Ich habe dabei den Teil in dem Tutorial der sich auf syncthing bezieht, bewusst weggelassen, da rsync besser zu meinem gewohnten Ablauf/Workflow passt, und auch nichts weiteres installiert/konfiguriert werden muss.     Alles was ich sonst noch machen musste (und nicht im Tutorial beschrieben ist) : einen <a href="https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">passwortlosen remote Login</a> einrichten, sonst geht das nachher nicht automatisch ohne Benutzereingriff.<br />
+Insgesamt muss ich sagen: tolle Sache das, vor allem auch, weil man erstmal alles in Ruhe zuhause aufbauen und testen kann, und wenns fertig ist, gibt man die 'remote Backup Station' einfach einer vertrauenswürdigen Person mit Internetzugang, dort anstöpseln, einschalten, fertig.<br />
+Und dann kann die Bude auch abbrennen, ohne dass die eigenen (aktuellen !) Daten weg sind <i class="fa fas fa-smileo"></i><br />
+Zwei Anmerkungen noch zur Hardware:    </p>
+<ul>    <li>ein aktueller Raspberry PI 3 wäre natürlich schneller und besser, aber es ist schon bemerkenswert, dass auch die alten Dinger noch mit dem aktuellen Raspbian (Debian Stretch) laufen, von daher also keine Probleme machen - so ist neben allem andern auch der aktuelle zerotier Client verfügbar.</li>   <li>Die externe USB Platte braucht in dieser Konstellation eine eigene Spannungsversorgung, der Raspi packt das allein nicht.</li> </ul>
+<p>Und noch ein Nachtrag für die Handyfraktion &#128522; :<br />
+Ja, man kann auch Handys in das zerotier Netzwerk einbinden, die zerotier-App gibts im Play-Store (einfach nach zerotier suchen). Die Synchronisierung kann dann entweder mit syncthing (siehe Artikel oben) erfolgen, oder (für die rsync Fans wie mich) mit <a href="https://f-droid.org/en/packages/org.amoradi.syncopoli/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Syncopoli</a> .<br />
+(Mit Iphones geht das wahrscheinlich auch irgendwie, ist aber nicht meine Baustelle -&gt; selber den Gockel fragen...).</p>                                              
+    </div>
+
+                
+    <footer class="entry-footer">
+        <span class="posted-on">
+                        <time class="entry-date published updated" datetime="20th Dec 2018">20.12.2018</time>
+        </span>
+        
+                            <span class="cat-links">
+                                    <a href="//category:EDV">EDV</a>
+                            </span>
+        
+                    <span class="tags-links">
+                                    <a href="//tag:Backup">Backup,</a>
+                                    <a href="//tag:EDV">EDV,</a>
+                                    <a href="//tag:private Cloud">private Cloud,</a>
+                                    <a href="//tag:Syncopoli">Syncopoli,</a>
+                                    <a href="//tag:Syncthing">Syncthing,</a>
+                                    <a href="//tag:VPN">VPN,</a>
+                                    <a href="//tag:Zerotier">Zerotier</a>
+                            </span>
+            </footer>
+    
+                                                                      </article>
+
+	<div class="post">
+		<h4>Ähnliche Beiträge:</h4>
+		<ul class="related-pages">
+                                <li>
+                                <a href="/blog/2023-wireguard-evaluation" title="Wireguard Evaluation">Wireguard Evaluation</a>
+            </li>
+                                        <li>
+                                <a href="/blog/2021-byebye-fli4l" title="ByeBye Fli4l">ByeBye Fli4l</a>
+            </li>
+                                        <li>
+                                <a href="/blog/2021-matrix" title="Hello Matrix - here I come !">Hello Matrix - here I come !</a>
+            </li>
+                                        <li>
+                                <a href="/blog/ninicom-cutecom-nostalgie" title="minicom/CuteCom Nostalgie">minicom/CuteCom Nostalgie</a>
+            </li>
+            </ul>	</div>
+
+                <style type="text/css">
+        .post-navigation .nav-previous a:before { background-color: rgba(0, 0, 0, 0.4); }
+        </style>
+    
+    <nav class="navigation post-navigation" role="navigation">
+                <div class="nav-links">
+                            <div class="nav-previous" >
+                    <span class="meta-nav" aria-hidden="true" style="color: #fff;">Vorheriger Beitrag:</span>
+                    <a href="/blog/zimmi" rel="prev">
+                                                <span class="post-title" style="color: #fff;">Zimmi †</span>
+                    </a>
+                </div>
+                                        <div class="nav-next" >
+                    <span class="meta-nav" aria-hidden="true" >Nächster Beitrag:</span>
+                    <a href="/blog/classicpress-statt-wordpress-ein-holzweg" rel="next">
+                                                <span class="post-title" >ClassicPress statt WordPress - ein Holzweg ?</span>
+                    </a>
+                </div>
+                    </div>
+    </nav>
+											<a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+					</main>
+	
+		
+			<script src="/werner/assets/3c211ab80e5b4172dfc6a545e993b4fe.js"></script>
+ 		</body>
+</html>

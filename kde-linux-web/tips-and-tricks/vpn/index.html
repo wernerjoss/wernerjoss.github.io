@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+			<meta charset="utf-8" />
+		<title>VPN | Hoernerfranzracing</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="/user/themes/myvela/images/favicon.ico" />   		<meta name="generator" content="GravCMS" />
+<meta name="description" content="Motorradsport unter Freunden" />
+
+		<link rel="canonical" href="./kde-linux-web/tips-and-tricks/vpn" />
+				<link rel="preload" href=/werner/user/themes/myvela/fonts/fontawesome-webfont.woff2?v=4.7.0  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-regular.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700italic.woff2  as="font" crossorigin="">
+
+																						 			 		
+																
+							<link href="/assets/7b2c250d4d6c75b9d1714be88a2a15f2.css" type="text/css" rel="stylesheet">
+
+			<script src="/werner/assets/a9e5ab09eff08c476502ecc0633daeb2.js"></script>
+<script>
+window.addEventListener("load", function() {
+
+	var pluginConfig = {"enabled":true,"custom":false,"position":"bottom-right","compliance":"info","palette":"gray","layout":"classic","informations":"\/werner\/impressum\/datenschutz","banner_message":"Wir setzen nur technisch notwendige Cookies - diese k\u00f6nnen nicht abgelehnt werden","banner_dismiss":"Ok","banner_accept":"","banner_policy":""};
+	var cookieconsentInitialse = {
+		"position": pluginConfig.position,
+		"theme": pluginConfig.layout,
+		"type": pluginConfig.compliance,
+
+		"content": createCookieContent(pluginConfig),
+		"palette": createCookiePalette(pluginConfig.palette)
+	}
+
+		if (pluginConfig.custom)
+	{
+		var customInitialise = JSON.parse(
+			pluginConfig.custom_config.replace(/\r?\n|\r/g,'')
+		);
+		cookieconsentInitialse = Object.assign({}, cookieconsentInitialse, customInitialise);
+	}
+
+		window.cookieconsent.initialise(cookieconsentInitialse);
+});
+
+function createCookiePalette(configPalette)
+{
+	var palette = {
+		"popup": {},
+		"button": {}
+	};
+
+	if (configPalette === "black")
+	{
+		palette.popup.background = "#000";
+		palette.button.background = "#f1d600";
+	}
+
+	if (configPalette === "white")
+	{
+		palette.popup.background = "#eaf7f7";
+		palette.popup.text = "#5c7291";
+
+		palette.button.background = "#56cbdb";
+		palette.button.text = "#ffffff";
+	}
+
+	if (configPalette === "gray")
+	{
+		palette.popup.background = "#252e39";
+		palette.button.background = "#14a7d0";
+	}
+
+	return palette;
+}
+
+function createCookieContent(config)
+{
+	var cookieContent = {};
+
+	cookieContent.message = "Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Durch die weitere Nutzung der Seite stimmen Sie der Verwendung zu.";
+	if (config.banner_message)
+	{
+		cookieContent.message = config.banner_message;
+	}
+
+	cookieContent.dismiss = "OK";
+	if (config.banner_dismiss)
+	{
+		cookieContent.dismiss = config.banner_dismiss;
+	}
+
+	cookieContent.deny = "PLUGINS.SIMPLE_COOKIE.BANNER_DENY";
+	if (config.banner_deny)
+	{
+		cookieContent.deny = config.banner_deny;
+	}
+
+
+	cookieContent.allow = "Weitere Informationen";
+	if (config.banner_accept)
+	{
+		cookieContent.allow = config.banner_accept;
+	}
+
+	cookieContent.link = "Weitere Informationen";
+	if (config.banner_policy)
+	{
+		cookieContent.link = config.banner_policy;
+	}
+
+	cookieContent.href = "https://cookiesandyou.com";
+	if (config.informations)
+	{
+		cookieContent.href = config.informations;
+	}
+
+	return cookieContent;
+}
+</script>
+<script>
+$(document).ready(function(){
+    $('a[rel="lightbox"]').featherlight({
+        openSpeed: 250,
+        closeSpeed: 250,
+        closeOnClick: 'background',
+        closeOnEsc: '1',
+        root: 'body',
+        afterContent: function() {
+            var caption = this.$currentTarget.find('img').attr('alt');
+            this.$instance.find('.caption').remove();
+            $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+        }
+    });
+});
+</script>
+
+		
+		<style>
+            .notices.yellow p::after {
+        content: "";
+        } 
+        .notices.red p::after {
+        content: "";
+        }
+        .notices.blue p::after {
+        content: "";
+        }
+        .notices.green p::after {
+        content: "";
+        } 
+                @media screen and (min-width: 1200px) {
+            .slideout-panel {
+            margin-left: 320px;
+            }
+
+            .slideout-menu {
+            display: block;
+            }
+
+            .toggle-button {
+            visibility: hidden;
+            }
+            .page-title{ 
+                margin-top: 35px;
+            }
+        }
+    </style>		</head>
+	<body>
+					<div class="main-nav" id="menu">
+			  <div class="flex-container">
+    <a href="" class="sidebar-brand">
+              <img
+          src="/werner/user/themes/myvela/images/logo.png"
+          style="object-fit: contain;
+                          height:165px;
+                                      max-width: 100%;
+                        "
+          alt="">
+            
+    </a>
+    <div style="padding-left: 15px;margin-bottom: 0.25em;">      <h4>Hoernerfranzracing</h4>
+    <h6>Motorradsport unter Freunden</h6></div>
+</div>
+
+<nav class="sidebar-nav">
+<ul class="metismenu"  id="metismenu">
+                                                            <li>
+                <a href="/about" class="  webkitNoSelect" aria-expanded="false">
+                    About
+                </a>
+            </li>
+                                                                <li>
+                <a href="/allgemein" class="  webkitNoSelect" aria-expanded="false">
+                    Allgemeine Informationen
+                </a>
+            </li>
+                                                                <li>
+                <a href="/links" class="  webkitNoSelect" aria-expanded="false">
+                    Links
+                </a>
+            </li>
+                                                                <li class="mm-active">
+                <a href="/kde-linux-web" class="mm-active  has-arrow webkitNoSelect" aria-expanded=&quot;true&quot;>
+                    EDV / Linux /Web
+                </a>
+                <ul class="mm-show">
+                                                                            <li class="mm-active">
+                <a href="/kde-linux-web/tips-and-tricks" class="mm-active  has-arrow webkitNoSelect" aria-expanded=&quot;true&quot;>
+                    Tips &amp; Tricks
+                </a>
+                <ul class="mm-show">
+                                                                            <li>
+                <a href="/kde-linux-web/tips-and-tricks/dokumente-in-der-cloud" class="  webkitNoSelect" aria-expanded="false">
+                    Dokumente in der Cloud
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/web-development-with-grav-cms" class="  webkitNoSelect" aria-expanded="false">
+                    Web Development with GRAV Cms
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/docker-grav-xdebug" class="  webkitNoSelect" aria-expanded="false">
+                    Docker Grav Xdebug
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/vpn" class="mm-active active-page webkitNoSelect" aria-expanded="false">
+                    VPN
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/kde-blog" class="  webkitNoSelect" aria-expanded="false">
+                    EDV Archiv
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-ics-importer" class="  webkitNoSelect" aria-expanded="false">
+                    WP-ICS Importer
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-caldav2ics" class="  webkitNoSelect" aria-expanded="false">
+                    WP-CalDav2ICS
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/spam" class="  webkitNoSelect" aria-expanded="false">
+                    SPAM
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/gubed" class="  webkitNoSelect" aria-expanded="false">
+                    Gubed
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/ldap" class="  webkitNoSelect" aria-expanded="false">
+                    LDAP
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/email-encryption" class="  webkitNoSelect" aria-expanded="false">
+                    Email Encryption
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kalender" class="  webkitNoSelect" aria-expanded="false">
+                    Kalender
+                </a>
+            </li>
+                                                                <li>
+                <a href="/forum" class="  webkitNoSelect" aria-expanded="false">
+                    Forum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/impressum" class="  webkitNoSelect" aria-expanded="false">
+                    Impressum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/archiv" class="  webkitNoSelect" aria-expanded="false">
+                    Blog-Archiv
+                </a>
+            </li>
+            
+</ul>
+</nav>
+<div style="padding-left: 15px;margin-top: 0.1em;">
+  <div class="search-wrapper">
+    <form name="search" data-simplesearch-form>
+        <input
+            name="searchfield"
+            class="search-input"
+            aria-label="search"
+            type="text"
+             data-min="3"             required
+            placeholder="Suche …"
+            value=""
+            data-search-invalid="Bitte geben Sie mindestens 3 Zeichen ein"
+            data-search-separator=":"
+            data-search-input="/werner/search/query"
+        />
+            </form>
+</div>
+</div>
+<div style="padding-left: 15px;margin-top: 0.4em;">
+        <a class="button" href="/blog.rss"><i class="fa fa-rss-square"></i> RSS</a>
+</div>
+
+		</div>
+			
+			<main id="panel" class="slideout-panel">
+			  <div class="toggle-button hamburger hamburger--spin">
+    <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <article class="post-2 page type-page status-publish hentry">
+    <header class="entry-header">
+            </header>
+    <div class="entry-content">
+     <p>Diese Seite beschäftigt sich mit dem Thema VPN, und zwar zunächst mit dem Fokus auf Privatsphäre im Netz, Geoblocking, Streaming etc. - später dann auch mit dem Aufbau eines VPN zur Abschottung eines (Firmen-) Netzes !<br />
+Besonders das Thema Geoblocking wird spätestens 2024 für alle Liebhaber der Moto GP aktuell, insbesondere diejenigen, die bisher die Übertragungen von Servus-TV angeschaut haben.<br />
+Dies wird nämlich im nächsten Jahr für deutsche Zuschauer nicht mehr ohne weiteres möglich sein, denn Servus TV zieht sich komplett aus dem deutschen Markt zurück (sowohl TV Programm als auch Video Streams) - also ist hier Handlungsbedarf.<br />
+In den folgenden Abschnitten möchte ich nun auf verschiedene Aspekte der Problematik, Testergebnisse und Aussichten eingehen:</p>
+<p><div class="accordion-wrapper">
+                    <div>
+            <input id="3cf5c0e5090" name="3cf5c0e509" type="checkbox"  />
+            <label for="3cf5c0e5090">Status Quo (Stand 11/2023)</label>
+            <article>
+Folgende Alternativen bieten sich an:  </p>
+<ul>
+<li>Abo des Video-Passes von <a href="https://www.motogp.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">MotoGP.com</a></li>
+<li>Servus TV AT via <a href="https://www.kaspersky.de/resource-center/definitions/what-is-a-vpn" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">VPN</a> schauen</li>
+<li>Sich mit den im normalen TV bzw. Pay-TV verbliebenen Angeboten zufrieden geben.</li>
+<li>sonstige Live-Streams, im R4F Forum gibt es dazu in diesem langen <a href="https://www.racing4fun.de/forum/viewtopic.php?f=5&amp;t=27520" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">eigenen Thread</a> Informationen.</li>
+<li>Aktuell wird da auch gerade <a href="https://www.racing4fun.de/forum/viewtopic.php?p=1031867#p1031867" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Simpli TV AT</a> empfohlen - hab ich noch nicht probiert, scheint aber für 'Non-Techies' eine einfache Möglichkeit zu sein.</li>
+</ul>
+<p>Hierzu einige Anmerkungen:  </p>
+<ul>
+<li>Der MotoGP Video Pass bietet zweifellos das umfassendste Angebot (alle Sessions, Sondersendungen, Abruf on Demand, Nutzung auf mehreren Geräten...) aber er ist mit ca. 150€/Jahr auch nicht gerade preisgünstig.  </li>
+<li>Servus TV AT via VPN ist ein eigenes Thema das im Folgenden gesondert erläutert wird</li>
+<li>das normale TV (oder gar Pay TV) ist m.E. keine sinnvolle Option, das kennen wir noch aus den Eurosport Zeiten, und das was da 2024 kommt wird wohl noch miserabler sein...</li>
+<li>Update hierzu: <a href="https://www.speedweek.com/motogp/news/215970/Traurig-MotoGP-nur-mehr-bei-SKY-im-Pay-TV.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">laut Speedweek</a> gibt es MotoGP in D nur noch im Pay-TV (Sky) für etwa 23€ monatlich, und das tue ich mir bestimmt nicht an <i class="fa fas fa-meh-o"></i>.  </li>
+<li>zu den sonstigen Live-Streams muss man anmerken dass diese meist miserable Qualität und/oder Übertragungsraten haben, und ausserdem meist mit unglaublich viel Junk/Werbung oder gar Malware vollgestopft sind - für mich keine Alternative.
+</article>
+        </div>
+    </div></li>
+</ul>
+<p><div class="accordion-wrapper">
+                    <div>
+            <input id="87978e2fef0" name="87978e2fef" type="checkbox"  />
+            <label for="87978e2fef0">VPN Anbieter (kommerziell)</label>
+            <article>
+Ich möchte hier nun das Thema VPN näher erläutern und insbesondere auf die Technik und die Kosten der verschiedenen Möglichkeiten eingehen.<br />
+Da sind zuerst die Angebote von Komplettlösungen zu nennen, bei denen der vollständige Traffic eines (oder mehrerer) Endgeräts über einen sogenannten Proxy Server läuft, der dem Zielrechner jedes Requests seine eigene IP Adresse anstelle der des Anwenders vorgaukelt und ausserdem die Weitergabe eindeutiger Informationen ('Super Cookies') über diesen blockt.<br />
+Zu diesen Anbietern zählen z.B <a href="https://nordvpn.com" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Nord VPN</a> und <a href="https://protonvpn.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Proton VPN</a> - ein Vergleich verschiedener Anbieter findet sich <a href="https://www.heise.de/download/specials/Anonym-surfen-mit-VPN-Die-besten-VPN-Anbieter-im-Vergleich-3798036" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">hier</a>.<br />
+Diesen allen gemeinsam ist, dass hier auf dem Endgerät ein sogenannter VPN Client:  </p>
+<p><img alt="VPN Client" src="/werner/images/0/a/3/7/7/0a377c2c7b7ced5b756f95378d58d6e0a79b2fb2-protonvpgui.png?g-007d4908" /></p>
+<p>installiert wird, der den kompletten Internet Datenverkehr des Geräts (also alle Protokolle: udp, tcp, http, smtp, ftp, ssh...) über einen der Proxy Server des Providers abwickelt.<br />
+Damit ist dann auch der bestmögliche Schutz der Privatshäre (Anonymität) gewährleistet. Die Angebote unterscheiden sich in Leistung, Flexibilität und Preis - die Preise schwanken zwischen 3,50 und 6€/Monat bei 1 bis 2 Jahres-Abos (bei kürzeren Laufzeiten mehr), die Flexibilität ergibt sich aus der Anzahl der Proxy Server und deren Standorte.<br />
+Zur Umgehung des Geo-Blockings von Servus TV AT benötigt man z.B. einen in Österreich betriebenen Server.<br />
+Von den o.g. Providern habe ich inzwischen Protonvpn, von dem es eine kostenlose (allerdings in der Serverauswahl stark beschränkte) Version gibt, getestet und die Ergebnisse sehen recht gut aus, nur Ping (=Reaktionszeit) ist mit VPN merkbar langsamer:</p>
+<p><img alt="ohne VPN" src="/werner/images/1/d/9/8/e/1d98eb2980c1ded755cb038e95d1e916a2130d24-vfspeedtest20231026.png?g-007d4908" /> <img alt="mit VPN" src="/werner/images/1/5/a/5/f/15a5f1a481493a7b4147f3d639b582780b8789df-vfspeedtestvpn20231026.png?g-007d4908" /></p>
+<p>Eine weitere Alternative, die keine lokale Installation eines Clients o.ä. erfordert, ist die Verwendung eines Browser-Plugins - sehr einfach in der Handhabung, aber eben auf den Browser beschränkt, d.h. jeglicher andere Datenverkehr ist nicht geschützt bzw. maskiert.<br />
+Aktuell habe ich mal <a href="https://www.hide-my-ip.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Hide my IP</a> mit Firefox getestet, von dem es auch eine freie Version gibt, und es hat ganz gut funktioniert, um den internationalen Moto GP Stream von Servus TV AT anzuschauen.<br />
+So wie sich die Sache momentan darstellt, werde ich in Zukunft wohl einen 'echten' VPN Dienst nutzen, wenn es so weit ist, werde ich hier berichten.</p>
+<p>Und noch ein Nachtrag zum Thema Video-Aufzeichnung:<br />
+Bei allen Lösungen ohne direkten TV Empfang ist das nicht so ohne weiteres möglich.<br />
+Beim MotoGP Pass der Dorna an sich unnötig, da man ja alles auch nachträglich jederzeit in deren Videothek anschauen kann.<br />
+Aufnahmen vom Streaming gehen zumindest rudimentär mit <a href="https://www.videolan.org/vlc/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">VLC</a> - aber nicht so komfortabel und einfach wie mit einem Videorecorder <i class="fa fas fa-smile-o"></i>.<br />
+Ansonsten wäre da noch <a href="https://forum.kodi.tv/showthread.php?tid=329991" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Stream Recording via Kodi</a> - das habe ich noch nicht ausprobiert.<br />
+Das scheint aber auch nicht gerade die benutzerfreundliche Lösung zu sein, das eigentliche Tool ist hier wohl <a href="https://ffmpeg.org/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">ffmpeg</a>, mit dem das auch direkt geht, aber das ist nix für Maus-Schubser - da muss man schon lesen und schreiben können <i class="fa fas fa-smile-o"></i> - z.B. so ein Shell Script:</p>
+<pre><code>#!/bin/bash
+# Usage: VidStreamRecord.sh (direct Call) or
+# at 06:30 tomorrow -f ~/bin/VidStreamRecord.sh # scheduled call via at
+
+# Parameters:
+StreamUrl="https://stv-live.akamaized.net/hls/live/2031012/lingeoSTVDEwebPri/master.m3u8"
+RecTime=10  # Seconds
+RecFile="video.mp4"
+
+# Video Recording goes here
+ffmpeg -n -i $StreamUrl -t $RecTime -c copy $RecFile</code></pre>
+<p>Und zum zeitversetzten Aufnehmen das Ganze dann noch via cron oder at an einen Command Scheduler delegieren (siehe Kommentar im Script).</p>
+</article>
+        </div>
+    </div>
+<p><div class="accordion-wrapper">
+                    <div>
+            <input id="f68fcf88b20" name="f68fcf88b2" type="checkbox"  />
+            <label for="f68fcf88b20">IPAX Testserver Wien</label>
+            <article>
+Primär aus sportlichem Ehrgeiz habe ich nun Anfang Dezember '23 eine VPS Testinstallation bei einem österreichischen Anbieter - <a href="https://ipax.at" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">IPAX</a> gebucht, dieser stellt so etwas dankenswerterweise 2 Wochen kostenlos zur Verfügung.<br />
+Also erstmal schlau gemacht, wie man so einen <a href="https://www.wireguard.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Wireguard</a> Server einrichtet und konfiguriert, dazu ein paar Links:  </p>
+<ul>
+<li><a href="https://www.howtoforge.de/anleitung/wireguard-vpn-unter-debian-11-installieren/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://www.howtoforge.de/anleitung/wireguard-vpn-unter-debian-11-installieren/</a></li>
+<li><a href="https://github.com/wg-easy/wg-easy" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://github.com/wg-easy/wg-easy</a></li>
+<li><a href="https://github.com/ngoduykhanh/wireguard-ui" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://github.com/ngoduykhanh/wireguard-ui</a><br />
+Das hat dann recht schnell funktioniert, das Admin-Panel mit wg-easy sieht dann etwa so aus:<br />
+<img src="/werner/kde-linux-web/tips-and-tricks/vpn/./ksnip_20231214-092315.png" alt="Admin Panel" /><br />
+Und die ersten Testergebnisse waren sehr ermutigend, der Verbindungsaufbau ging ruck-zuck, der Test auf <a href="https://ipwhois.io/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">IP Whois</a> zeigte die richtige AT - IP Adresse an:<br />
+<img src="/werner/kde-linux-web/tips-and-tricks/vpn/./ksnip_20231214-093748.png" alt="" /> und damit landete man im Browser beim Aufruf der <a href="hppts://servustv-com">Servus TV Webseite</a> direkt auf der Österreich Version, erkennbar auf den ersten Blick am TV-Programm und auf den zweiten Blick an der Möglichkeit, den kompletten Valencia GP in der Videothek abrufen zu können (ein Service, der in D nie vorhanden war).<br />
+Das TV Programm Live ansehen ging auch, also alles perfekt, oder ??<br />
+Zunächst ja, aber im Lauf der weiteren Tests zeigte sich schnell, dass das so nicht stimmte: der TV-Live-Stream wurde mehr und mehr zum Problem, bis er dann paktisch gar nicht mehr funktioniert hat - hier eine unvollständige Doku der Testergebnisse:<br />
+<img src="/werner/kde-linux-web/tips-and-tricks/vpn/./ksnip_20231214-085230.png" alt="" /><br />
+Da kam natürlich die Frage auf: Woran liegts ?<br />
+Die Vermutung, dass Servus-TV den Verbindungsaufbau als VPN Session zu erkennen meint und daraufhin die (statische) IP Adresse des Servers blacklistet, erwies sich als falsch, denn erstens wurde die Verbindung ja nicht geblockt, sondern nur der Live-Stream behindert, und zweitens (wichtiger) zeigte sich dass die direkte Video-Aufzeichnung des Streams via ffmpeg IMMER problemlos funktionierte.<br />
+Es ist also nicht so problemlos wie erhofft, und das liegt ziemlich sicher nicht am Testserver, sondern an den Servus Betreibern: die wissen dort natürlich dass inzwischen viele Leute aus dem Ausland via VPN streamen und behindern das nach Kräften, siehe z.B. <a href="https://forum.digitalfernsehen.de/threads/formel-1-&#xFC;ber-servustv-mit-nordvpn-funktioniert-nicht.424536/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">diesen Thread</a>.<br />
+Es scheint also so eine Art Hase-und-Igel Spiel zwischen den kommerziellen VPN Anbietern und den Content Providern zu geben.<br />
+Wie die VPN Anbieter versuchen, die VPN Erkennung zu unterlaufen, ist z.B. einigermassen verständlich in diesem <a href="https://www.computerbild.de/artikel/cb-Tipps-VPN-WireGuard-Was-kann-der-VPN-Newcomer-29268697.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Computer Bild Artikel</a> im Abschnitt VPN-Dienste-Nord VPN erklärt (doppeltes NAT System).<br />
+Und das 'Spiel' wird 2024 noch verbissener, wenn Servus TV in D ganz weg ist, da bin ich sicher.</li>
+</ul>
+<p>Fazit: ein selbst gehosteter WireGuard funktioniert sehr gut, ist aber ohne weitere Verschleierungsverfahren wohl nicht in der Lage, die kommerziellen Content Anbieter die mit Geoblocking arbeiten, völlig auszutricksen.  </p>
+</article>
+        </div>
+    </div>
+<p><a name="Ausblick"></a>
+<div class="accordion-wrapper">
+                    <div>
+            <input id="adc84f0bb00" name="adc84f0bb0" type="checkbox" checked="checked" />
+            <label for="adc84f0bb00">Ausblick</label>
+            <article>
+Aktuell gibt es Spekulationen, dass der designierte Nachfolger von Servus TV in Deutschland, <a href="https://www.df1media.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">DF1</a>, evtl. die MotoGP im Free TV überträgt, hierzu mal <a href="https://www.ruhr24.de/promi-tv/servustv-programm-dazn-neu-tv-sender-startet-kostenlos-jeder-automatisch-empfang-df1-92719759.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">eine der Meldungen</a> - also mal schauen....<br />
+Und ja, einen Plan B gibt es natürlich auch (20.12.: ist bereits implementiert und funktions-getestet !), der wird hier aber nicht der ganzen Welt vorgestellt <i class="fa fas fa-smile-o"></i>.<br />
+Update 15.01.24:<br />
+Leider ist durch die aktuellen Entwicklungen nun wieder alles in der Schwebe, auch der inzwischen zum Plan A avancierte Plan B <i class="fa fas fa-meh-o"></i>.<br />
+Es sieht momentan so aus, dass Servus TV versucht, das Geoblocking mit allen Mitteln durchzudrücken, auch durch Blockade ganzer IP-Adressbereiche von österreichischen (!) Hostern, siehe dazu den <a href="https://forum.netcup.de/netcup-anwendungen/scp-server-control-panel/17827-geoblocking-vps-wien/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">aktuellen Thread</a> im Netcup Forum.<br />
+Und das wird auch die kommerziellen VPN Provider treffen: die haben zwar mehr Möglichkeiten das zu umgehen als ein privater VPS Betreiber, aber auch deren Server stehen in zentralen österreichischen Rechenzentren und werden genauso betroffen sein.<br />
+Also erst mal sehen wie sich das Ganze entwickelt - es bleibt jedenfall spannend <i class="fa fas fa-smile-o"></i>.</p>
+</article>
+        </div>
+    </div>     </div>
+
+    
+  </article>
+										<a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+					</main>
+	
+		
+			<script src="/werner/assets/3c211ab80e5b4172dfc6a545e993b4fe.js"></script>
+ 		</body>
+</html>

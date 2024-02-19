@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+			<meta charset="utf-8" />
+		<title>Docker Grav Xdebug | Hoernerfranzracing</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="/user/themes/myvela/images/favicon.ico" />   		<meta name="generator" content="GravCMS" />
+<meta name="description" content="Motorradsport unter Freunden" />
+
+		<link rel="canonical" href="./kde-linux-web/tips-and-tricks/docker-grav-xdebug" />
+				<link rel="preload" href=/werner/user/themes/myvela/fonts/fontawesome-webfont.woff2?v=4.7.0  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-regular.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700italic.woff2  as="font" crossorigin="">
+
+																						 			 		
+																
+							<link href="/assets/d6502bb3b9720afeb16e07f83ef1b182.css" type="text/css" rel="stylesheet">
+
+			<script src="/werner/assets/a9e5ab09eff08c476502ecc0633daeb2.js"></script>
+<script>
+window.addEventListener("load", function() {
+
+	var pluginConfig = {"enabled":true,"custom":false,"position":"bottom-right","compliance":"info","palette":"gray","layout":"classic","informations":"\/werner\/impressum\/datenschutz","banner_message":"Wir setzen nur technisch notwendige Cookies - diese k\u00f6nnen nicht abgelehnt werden","banner_dismiss":"Ok","banner_accept":"","banner_policy":""};
+	var cookieconsentInitialse = {
+		"position": pluginConfig.position,
+		"theme": pluginConfig.layout,
+		"type": pluginConfig.compliance,
+
+		"content": createCookieContent(pluginConfig),
+		"palette": createCookiePalette(pluginConfig.palette)
+	}
+
+		if (pluginConfig.custom)
+	{
+		var customInitialise = JSON.parse(
+			pluginConfig.custom_config.replace(/\r?\n|\r/g,'')
+		);
+		cookieconsentInitialse = Object.assign({}, cookieconsentInitialse, customInitialise);
+	}
+
+		window.cookieconsent.initialise(cookieconsentInitialse);
+});
+
+function createCookiePalette(configPalette)
+{
+	var palette = {
+		"popup": {},
+		"button": {}
+	};
+
+	if (configPalette === "black")
+	{
+		palette.popup.background = "#000";
+		palette.button.background = "#f1d600";
+	}
+
+	if (configPalette === "white")
+	{
+		palette.popup.background = "#eaf7f7";
+		palette.popup.text = "#5c7291";
+
+		palette.button.background = "#56cbdb";
+		palette.button.text = "#ffffff";
+	}
+
+	if (configPalette === "gray")
+	{
+		palette.popup.background = "#252e39";
+		palette.button.background = "#14a7d0";
+	}
+
+	return palette;
+}
+
+function createCookieContent(config)
+{
+	var cookieContent = {};
+
+	cookieContent.message = "Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Durch die weitere Nutzung der Seite stimmen Sie der Verwendung zu.";
+	if (config.banner_message)
+	{
+		cookieContent.message = config.banner_message;
+	}
+
+	cookieContent.dismiss = "OK";
+	if (config.banner_dismiss)
+	{
+		cookieContent.dismiss = config.banner_dismiss;
+	}
+
+	cookieContent.deny = "PLUGINS.SIMPLE_COOKIE.BANNER_DENY";
+	if (config.banner_deny)
+	{
+		cookieContent.deny = config.banner_deny;
+	}
+
+
+	cookieContent.allow = "Weitere Informationen";
+	if (config.banner_accept)
+	{
+		cookieContent.allow = config.banner_accept;
+	}
+
+	cookieContent.link = "Weitere Informationen";
+	if (config.banner_policy)
+	{
+		cookieContent.link = config.banner_policy;
+	}
+
+	cookieContent.href = "https://cookiesandyou.com";
+	if (config.informations)
+	{
+		cookieContent.href = config.informations;
+	}
+
+	return cookieContent;
+}
+</script>
+<script>
+$(document).ready(function(){
+    $('a[rel="lightbox"]').featherlight({
+        openSpeed: 250,
+        closeSpeed: 250,
+        closeOnClick: 'background',
+        closeOnEsc: '1',
+        root: 'body',
+        afterContent: function() {
+            var caption = this.$currentTarget.find('img').attr('alt');
+            this.$instance.find('.caption').remove();
+            $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+        }
+    });
+});
+</script>
+
+		
+		<style>
+            .notices.yellow p::after {
+        content: "";
+        } 
+        .notices.red p::after {
+        content: "";
+        }
+        .notices.blue p::after {
+        content: "";
+        }
+        .notices.green p::after {
+        content: "";
+        } 
+                @media screen and (min-width: 1200px) {
+            .slideout-panel {
+            margin-left: 320px;
+            }
+
+            .slideout-menu {
+            display: block;
+            }
+
+            .toggle-button {
+            visibility: hidden;
+            }
+            .page-title{ 
+                margin-top: 35px;
+            }
+        }
+    </style>		</head>
+	<body>
+					<div class="main-nav" id="menu">
+			  <div class="flex-container">
+    <a href="" class="sidebar-brand">
+              <img
+          src="/werner/user/themes/myvela/images/logo.png"
+          style="object-fit: contain;
+                          height:165px;
+                                      max-width: 100%;
+                        "
+          alt="">
+            
+    </a>
+    <div style="padding-left: 15px;margin-bottom: 0.25em;">      <h4>Hoernerfranzracing</h4>
+    <h6>Motorradsport unter Freunden</h6></div>
+</div>
+
+<nav class="sidebar-nav">
+<ul class="metismenu"  id="metismenu">
+                                                            <li>
+                <a href="/about" class="  webkitNoSelect" aria-expanded="false">
+                    About
+                </a>
+            </li>
+                                                                <li>
+                <a href="/allgemein" class="  webkitNoSelect" aria-expanded="false">
+                    Allgemeine Informationen
+                </a>
+            </li>
+                                                                <li>
+                <a href="/links" class="  webkitNoSelect" aria-expanded="false">
+                    Links
+                </a>
+            </li>
+                                                                <li class="mm-active">
+                <a href="/kde-linux-web" class="mm-active  has-arrow webkitNoSelect" aria-expanded=&quot;true&quot;>
+                    EDV / Linux /Web
+                </a>
+                <ul class="mm-show">
+                                                                            <li class="mm-active">
+                <a href="/kde-linux-web/tips-and-tricks" class="mm-active  has-arrow webkitNoSelect" aria-expanded=&quot;true&quot;>
+                    Tips &amp; Tricks
+                </a>
+                <ul class="mm-show">
+                                                                            <li>
+                <a href="/kde-linux-web/tips-and-tricks/dokumente-in-der-cloud" class="  webkitNoSelect" aria-expanded="false">
+                    Dokumente in der Cloud
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/web-development-with-grav-cms" class="  webkitNoSelect" aria-expanded="false">
+                    Web Development with GRAV Cms
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/docker-grav-xdebug" class="mm-active active-page webkitNoSelect" aria-expanded="false">
+                    Docker Grav Xdebug
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/vpn" class="  webkitNoSelect" aria-expanded="false">
+                    VPN
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/kde-blog" class="  webkitNoSelect" aria-expanded="false">
+                    EDV Archiv
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-ics-importer" class="  webkitNoSelect" aria-expanded="false">
+                    WP-ICS Importer
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-caldav2ics" class="  webkitNoSelect" aria-expanded="false">
+                    WP-CalDav2ICS
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/spam" class="  webkitNoSelect" aria-expanded="false">
+                    SPAM
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/gubed" class="  webkitNoSelect" aria-expanded="false">
+                    Gubed
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/ldap" class="  webkitNoSelect" aria-expanded="false">
+                    LDAP
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/email-encryption" class="  webkitNoSelect" aria-expanded="false">
+                    Email Encryption
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kalender" class="  webkitNoSelect" aria-expanded="false">
+                    Kalender
+                </a>
+            </li>
+                                                                <li>
+                <a href="/forum" class="  webkitNoSelect" aria-expanded="false">
+                    Forum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/impressum" class="  webkitNoSelect" aria-expanded="false">
+                    Impressum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/archiv" class="  webkitNoSelect" aria-expanded="false">
+                    Blog-Archiv
+                </a>
+            </li>
+            
+</ul>
+</nav>
+<div style="padding-left: 15px;margin-top: 0.1em;">
+  <div class="search-wrapper">
+    <form name="search" data-simplesearch-form>
+        <input
+            name="searchfield"
+            class="search-input"
+            aria-label="search"
+            type="text"
+             data-min="3"             required
+            placeholder="Suche …"
+            value=""
+            data-search-invalid="Bitte geben Sie mindestens 3 Zeichen ein"
+            data-search-separator=":"
+            data-search-input="/werner/search/query"
+        />
+            </form>
+</div>
+</div>
+<div style="padding-left: 15px;margin-top: 0.4em;">
+        <a class="button" href="/blog.rss"><i class="fa fa-rss-square"></i> RSS</a>
+</div>
+
+		</div>
+			
+			<main id="panel" class="slideout-panel">
+			  <div class="toggle-button hamburger hamburger--spin">
+    <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <article class="post-2 page type-page status-publish hentry">
+    <header class="entry-header">
+            </header>
+    <div class="entry-content">
+     <p>So, finally I got some time to dive into a long-standing Topic w.r. to web Development, especially Grav Plugins with PHP/Symfony - 18 Years after my <a href="/werner/kde-linux-web/gubed">last Article</a> on the very same Topic.<br />
+My usual Method followed the Procedures outlined in the official Grav Documentation, including <a href="https://learn.getgrav.org/17/advanced/debugging" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Testing &amp; Debugging</a>, which worked ok so far, but I always knew there is something better: <a href="https://xdebug.org/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Xdebug</a>.<br />
+However, I did not get the clue so far, how to best include this in my usual Toolchain, which has been <a href="https://www.kdevelop.org/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Kdevelop</a>, <a href="https://www.docker.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Docker</a> and <a href="http://www.manyfish.co.uk/sitecopy/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Sitecopy</a> on Debian Buster, so far.<br />
+Especially, there seemed to be no way to integrate Xdebug with the IDE (Kdevelop), although I knew there must have been a way to do this, at least, in the past.
+But then, over the last Months, I got more and more used to <a href="https://code.visualstudio.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Visual Studio Code</a> at my Workplace, and, despite this beeing a Microsoft Product, I began to like it <i class="fa fas fa-smile-o"></i>.
+Then, as I saw this is also available on Linux as a native Version, I began to use this more and more also on my favourite Platform: Debian (Buster).<br />
+This was also the Time to think again about Xdebug Integration, as I found more and more articles on the Net promoting this.<br />
+So, finally, I bit the bullet and gave it a try.<br />
+The first Steps seemed to be promising, as it turned out to not be too hard to:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/setup/linux" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Install VS Code on Debian</a></li>
+<li><a href="https://stackoverflow.com/questions/52227190/how-do-i-install-xdebug-on-dockers-official-php-debian-based-image" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Install Xdebug in a docker Image</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Configure VS Code to listen to Xdebug</a></li>
+</ul>
+<p>But, as always, there are Pitfalls:<br />
+Most descriptions on the net refer to configuring VS Code to work with Docker on Windows, which seems to be easier than on Linux, as the most Tutorials out there describe how to connect VS Code to an Xdebug Instance running on localhost via XAMPP, which is NOT true for Xdebug inside Docker.<br />
+For that use case, most Docs refer to using xdebug.client_host=host.docker.internal in xdebug.ini, but unfortunately, this works only on Windows &amp; Mac, not on Linux.<br />
+Finally, I found the relevant Hints in <a href="https://dev.to/natterstefan/docker-tip-how-to-get-host-s-ip-address-inside-a-docker-container-5anh" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">this Article</a>, where in the comments, there is also a rudimentary Bash Script that detects the IP address of the Docker Host and writes it as host.docker.internal to /etc/hosts in the Docker Image.<br />
+So, after having figured this out, I put together all the pieces and finally got it all working, the result is a <a href="https://github.com/wernerjoss/docker-grav" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">modified Clone</a> of the official Grav Docker Project on GitHub.<br />
+In short, the Operation is as follows:</p>
+<ul>
+<li>the original Dockerfile has been modified to additionally install Xdebug, iputils-ping and iproute2</li>
+<li>the script entrypoint.sh is copied into the Docker Image, it will detect the Docker host and add the appropriate entry to /etc/hosts</li>
+<li>this is then started just before cron and the webserver</li>
+<li>the configuration file for xdebug, xdebug.ini, is mirrored from the local storage into the Docker Instance via docker-compose.yml</li>
+<li>this way, it can be modified locally without having to build a new docker image</li>
+<li>the VSCODE launch configuration is in .vscode/launch.json and is used to point to the grav files inside the docker Instance</li>
+</ul>
+<p>This Setup has been tested and proved to work on Debian Buster + Docker + Grav + VS Code.<br />
+No warranty, however, for this to work in other scenarios - so, as always: YMMV <i class="fa fas fa-smile-o"></i>.</p>     </div>
+
+                 
+  </article>
+										<a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+					</main>
+	
+		
+			<script src="/werner/assets/3c211ab80e5b4172dfc6a545e993b4fe.js"></script>
+ 		</body>
+</html>

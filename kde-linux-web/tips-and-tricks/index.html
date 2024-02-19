@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+			<meta charset="utf-8" />
+		<title>Tips &amp; Tricks | Hoernerfranzracing</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="/user/themes/myvela/images/favicon.ico" />   		<meta name="generator" content="GravCMS" />
+<meta name="description" content="Motorradsport unter Freunden" />
+
+		<link rel="canonical" href="./kde-linux-web/tips-and-tricks" />
+				<link rel="preload" href=/werner/user/themes/myvela/fonts/fontawesome-webfont.woff2?v=4.7.0  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-regular.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700italic.woff2  as="font" crossorigin="">
+
+																						 			 		
+		                    														
+
+							<link href="/assets/7b356cf39f1f0c27e5faab301a2c1020.css" type="text/css" rel="stylesheet">
+
+			<script src="/werner/assets/1d728d5506fbf8ef0effd2e1bef7d512.js"></script>
+<script>
+window.addEventListener("load", function() {
+
+	var pluginConfig = {"enabled":true,"custom":false,"position":"bottom-right","compliance":"info","palette":"gray","layout":"classic","informations":"\/werner\/impressum\/datenschutz","banner_message":"Wir setzen nur technisch notwendige Cookies - diese k\u00f6nnen nicht abgelehnt werden","banner_dismiss":"Ok","banner_accept":"","banner_policy":""};
+	var cookieconsentInitialse = {
+		"position": pluginConfig.position,
+		"theme": pluginConfig.layout,
+		"type": pluginConfig.compliance,
+
+		"content": createCookieContent(pluginConfig),
+		"palette": createCookiePalette(pluginConfig.palette)
+	}
+
+		if (pluginConfig.custom)
+	{
+		var customInitialise = JSON.parse(
+			pluginConfig.custom_config.replace(/\r?\n|\r/g,'')
+		);
+		cookieconsentInitialse = Object.assign({}, cookieconsentInitialse, customInitialise);
+	}
+
+		window.cookieconsent.initialise(cookieconsentInitialse);
+});
+
+function createCookiePalette(configPalette)
+{
+	var palette = {
+		"popup": {},
+		"button": {}
+	};
+
+	if (configPalette === "black")
+	{
+		palette.popup.background = "#000";
+		palette.button.background = "#f1d600";
+	}
+
+	if (configPalette === "white")
+	{
+		palette.popup.background = "#eaf7f7";
+		palette.popup.text = "#5c7291";
+
+		palette.button.background = "#56cbdb";
+		palette.button.text = "#ffffff";
+	}
+
+	if (configPalette === "gray")
+	{
+		palette.popup.background = "#252e39";
+		palette.button.background = "#14a7d0";
+	}
+
+	return palette;
+}
+
+function createCookieContent(config)
+{
+	var cookieContent = {};
+
+	cookieContent.message = "Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Durch die weitere Nutzung der Seite stimmen Sie der Verwendung zu.";
+	if (config.banner_message)
+	{
+		cookieContent.message = config.banner_message;
+	}
+
+	cookieContent.dismiss = "OK";
+	if (config.banner_dismiss)
+	{
+		cookieContent.dismiss = config.banner_dismiss;
+	}
+
+	cookieContent.deny = "PLUGINS.SIMPLE_COOKIE.BANNER_DENY";
+	if (config.banner_deny)
+	{
+		cookieContent.deny = config.banner_deny;
+	}
+
+
+	cookieContent.allow = "Weitere Informationen";
+	if (config.banner_accept)
+	{
+		cookieContent.allow = config.banner_accept;
+	}
+
+	cookieContent.link = "Weitere Informationen";
+	if (config.banner_policy)
+	{
+		cookieContent.link = config.banner_policy;
+	}
+
+	cookieContent.href = "https://cookiesandyou.com";
+	if (config.informations)
+	{
+		cookieContent.href = config.informations;
+	}
+
+	return cookieContent;
+}
+</script>
+<script>
+$(document).ready(function(){
+    $('a[rel="lightbox"]').featherlight({
+        openSpeed: 250,
+        closeSpeed: 250,
+        closeOnClick: 'background',
+        closeOnEsc: '1',
+        root: 'body',
+        afterContent: function() {
+            var caption = this.$currentTarget.find('img').attr('alt');
+            this.$instance.find('.caption').remove();
+            $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+        }
+    });
+});
+</script>
+
+		
+		<style>
+            .notices.yellow p::after {
+        content: "";
+        } 
+        .notices.red p::after {
+        content: "";
+        }
+        .notices.blue p::after {
+        content: "";
+        }
+        .notices.green p::after {
+        content: "";
+        } 
+                @media screen and (min-width: 1200px) {
+            .slideout-panel {
+            margin-left: 320px;
+            }
+
+            .slideout-menu {
+            display: block;
+            }
+
+            .toggle-button {
+            visibility: hidden;
+            }
+            .page-title{ 
+                margin-top: 35px;
+            }
+        }
+    </style>		</head>
+	<body>
+					<div class="main-nav" id="menu">
+			  <div class="flex-container">
+    <a href="" class="sidebar-brand">
+              <img
+          src="/werner/user/themes/myvela/images/logo.png"
+          style="object-fit: contain;
+                          height:165px;
+                                      max-width: 100%;
+                        "
+          alt="">
+            
+    </a>
+    <div style="padding-left: 15px;margin-bottom: 0.25em;">      <h4>Hoernerfranzracing</h4>
+    <h6>Motorradsport unter Freunden</h6></div>
+</div>
+
+<nav class="sidebar-nav">
+<ul class="metismenu"  id="metismenu">
+                                                            <li>
+                <a href="/about" class="  webkitNoSelect" aria-expanded="false">
+                    About
+                </a>
+            </li>
+                                                                <li>
+                <a href="/allgemein" class="  webkitNoSelect" aria-expanded="false">
+                    Allgemeine Informationen
+                </a>
+            </li>
+                                                                <li>
+                <a href="/links" class="  webkitNoSelect" aria-expanded="false">
+                    Links
+                </a>
+            </li>
+                                                                <li class="mm-active">
+                <a href="/kde-linux-web" class="mm-active  has-arrow webkitNoSelect" aria-expanded=&quot;true&quot;>
+                    EDV / Linux /Web
+                </a>
+                <ul class="mm-show">
+                                                                            <li class="mm-active">
+                <a href="/kde-linux-web/tips-and-tricks" class="mm-active active-page has-arrow webkitNoSelect" aria-expanded=&quot;true&quot;>
+                    Tips &amp; Tricks
+                </a>
+                <ul class="mm-show">
+                                                                            <li>
+                <a href="/kde-linux-web/tips-and-tricks/dokumente-in-der-cloud" class="  webkitNoSelect" aria-expanded="false">
+                    Dokumente in der Cloud
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/web-development-with-grav-cms" class="  webkitNoSelect" aria-expanded="false">
+                    Web Development with GRAV Cms
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/docker-grav-xdebug" class="  webkitNoSelect" aria-expanded="false">
+                    Docker Grav Xdebug
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/tips-and-tricks/vpn" class="  webkitNoSelect" aria-expanded="false">
+                    VPN
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/kde-blog" class="  webkitNoSelect" aria-expanded="false">
+                    EDV Archiv
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-ics-importer" class="  webkitNoSelect" aria-expanded="false">
+                    WP-ICS Importer
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/wp-caldav2ics" class="  webkitNoSelect" aria-expanded="false">
+                    WP-CalDav2ICS
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/spam" class="  webkitNoSelect" aria-expanded="false">
+                    SPAM
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/gubed" class="  webkitNoSelect" aria-expanded="false">
+                    Gubed
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/ldap" class="  webkitNoSelect" aria-expanded="false">
+                    LDAP
+                </a>
+            </li>
+                                                                <li>
+                <a href="/kde-linux-web/email-encryption" class="  webkitNoSelect" aria-expanded="false">
+                    Email Encryption
+                </a>
+            </li>
+            
+                </ul>
+            </li>
+                                                                <li>
+                <a href="/kalender" class="  webkitNoSelect" aria-expanded="false">
+                    Kalender
+                </a>
+            </li>
+                                                                <li>
+                <a href="/forum" class="  webkitNoSelect" aria-expanded="false">
+                    Forum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/impressum" class="  webkitNoSelect" aria-expanded="false">
+                    Impressum
+                </a>
+            </li>
+                                                                <li>
+                <a href="/archiv" class="  webkitNoSelect" aria-expanded="false">
+                    Blog-Archiv
+                </a>
+            </li>
+            
+</ul>
+</nav>
+<div style="padding-left: 15px;margin-top: 0.1em;">
+  <div class="search-wrapper">
+    <form name="search" data-simplesearch-form>
+        <input
+            name="searchfield"
+            class="search-input"
+            aria-label="search"
+            type="text"
+             data-min="3"             required
+            placeholder="Suche …"
+            value=""
+            data-search-invalid="Bitte geben Sie mindestens 3 Zeichen ein"
+            data-search-separator=":"
+            data-search-input="/werner/search/query"
+        />
+            </form>
+</div>
+</div>
+<div style="padding-left: 15px;margin-top: 0.4em;">
+        <a class="button" href="/blog.rss"><i class="fa fa-rss-square"></i> RSS</a>
+</div>
+
+		</div>
+			
+			<main id="panel" class="slideout-panel">
+			    <div class="toggle-button hamburger hamburger--spin">
+    <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+    </div>
+    </div>
+    <article class="post-2 page type-page status-publish hentry">
+    <div class="entry-content">
+    <h1>Tips &amp; Tricks</h1>
+<p>Diese Seite ist eine lose Sammlung von Tips und Tricks die mir im Lauf der Jahre bei der Einrichtung meiner EDV Landschaft geholfen haben - eine Liste gegen das Vergessen, sozusagen <i class="fa fas fa-smile-o"></i>- sie erhebt keinen Anspruch auf Vollständigkeit oder Richtigkeit, und ist auch nicht sortiert - use at your own risk.</p>
+    </div>
+    </article>
+            <ul class="navigation">
+                                <li><a class="" href="#home-server-update">Home Server Update</a></li>
+                                <li><a class="" href="#gmx-dav">GMX DAV</a></li>
+                                <li><a class="" href="#google-mail-mal-wieder">Google Mail (mal wieder)</a></li>
+                                <li><a class="" href="#contao-auf-netcup-webhosting">Contao auf Netcup Webhosting</a></li>
+                                <li><a class="" href="#windoze-support-tips">Windoze Support Tips</a></li>
+                                <li><a class="" href="#syncthing">Syncthing</a></li>
+                                <li><a class="" href="#zulu-crypt-cryptsetup">zuluCrypt / Cryptsetup</a></li>
+                                <li><a class="" href="#vncserver-client-setup">Vncserver &amp; Client Setup</a></li>
+                                <li><a class="" href="#own-cloud-auf-netcup-hosting">OwnCloud auf Netcup Hosting</a></li>
+                                <li><a class="" href="#kde-5-18-f-r-debian">KDE 5.18 für Debian</a></li>
+                                <li><a class="" href="#aufbau-neuinstallation-eines-debian-systems-anhand-einer-vorlage-referenz-system">Aufbau/Neuinstallation eines Debian Systems anhand einer Vorlage (Referenz-System)</a></li>
+                                <li><a class="" href="#zeitsynchronisierung-debian-10">Zeitsynchronisierung Debian 10</a></li>
+                                <li><a class="" href="#apache-virtualhosts-einrichten">Apache Virtualhosts einrichten</a></li>
+                                <li><a class="" href="#request-client-hostname-from-dhcp-server">Request Client Hostname from DHCP Server</a></li>
+                                <li><a class="" href="#docker-auf-debian-installieren">Docker auf Debian installieren</a></li>
+                                <li><a class="" href="#fix-start-job-is-running-for-raise-network-interfaces-boot-meldung">Fix &quot;Start Job is running for raise network interfaces...&quot; Boot Meldung</a></li>
+                                <li><a class="" href="#vi-m-copy-paste-clonezilla-ssh-copy-id-rsync">Vi(m) Copy/Paste / Clonezilla / SSH Copy-Id / rsync</a></li>
+                                <li><a class="" href="#blog-links-zerotier-bulkmail-image-resize-baikal-imap">Blog Links (Zerotier/Bulkmail/Image Resize/Baikal/Imap)</a></li>
+                                <li><a class="" href="#grav-static-site">Grav Static Site</a></li>
+                                <li><a class="" href="#web-de-galore">Web.de Galore</a></li>
+                        </ul>
+        <article class="post-2 page type-page status-publish hentry">
+    <div class="entry-content">
+            <div id="home-server-update"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Home Server Update</h2>
+<p>Hier ein paar Anmerkungen zum Update meines Home-Servers, Debian 10 (buster) auf Debian 11 (bullseye).<br />
+Eigentlich ein Klacks, sollte man meinen, sources.list umstellen, dann apt-get update, apt-get dist-upgrade, fertig.<br />
+Aber so einfach war das dann doch nicht: dist-upgrade verkündete, mariadb-server deinstallieren zu wollen, und dann einige Folgefehler daraus - WTF ??<br />
+Im Netz fand sich dazu z.B. das hier: <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=988089" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">bug report</a> wobei man ja denken sollte, dass das aus 2021 längst behoben sein sollte (bei einem up-to-date buster).<br />
+Sieht aber nicht so aus, also was tun ?  </p>
+<ol>
+<li>Datenbanken sichern, am einfachsten mit mariabackup</li>
+<li>Python 2.7 Kram löschen</li>
+<li>Upgrade anstossen, mariadb löschen (lassen)</li>
+<li>apt-get install mariadb-server mariadb-client</li>
+<li>php7.3 Reste löschen/deaktivieren (a2dismod)</li>
+<li>dpkg-reconfigure phpmyadmin</li>
+</ol>
+<p>Und dann gings wieder <i class="fa fas fa-smile-o"></i>.</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="gmx-dav"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>GMX DAV</h2>
+<p>In letzter Zeit habe ich im Freundes/Bekanntenkreis diverse Workshops zum Thema <a href="/kde-linux-web/email-encryption">Email Encryption</a> gemacht, und da bleibt es natürlich nicht aus, dass man sich auch Gedanken macht, wie man die persönlichen Adressen und Kalender so speichert dass sie auf allen Geräteklassen synchron vorhanden sind.<br />
+Am einfachsten geht das natürlich z.B. mit den Google Apps, aber bzgl. Datenschutz/Privacy ist das eben der Offenbarungseid.<br />
+Besser ist da eine eigene Cloud (z.B. OwnCloud oder NextCloud) aber dazu muss man dann eben auch den entsprechenden Server betreiben.<br />
+Wer das nicht will, kann einen der seriöseren Dienste wie mailbox.org oder posteo wählen, es geht aber auch mit den hierzulande beliebten Diensten von web.de oder gmx.<br />
+Diese sind zwar auch hinsichtlich privacy bedenklich (auch sie verwenden die Kundendaten für Werbezwecke) wenn auch wohl nicht so intrusiv wie Google.
+Wie auch immer, zu Demo-Zwecken habe ich mir inzwischen auch einen gmx Account eingerichtet, und hier (ebenso bei web.de) gibt es immerhin auch die Dienste CalDav und CardDav.<br />
+Hier nun ein paar Tips zu deren Einrichtung/Nutzung mit Mozilla Thunderbird:<br />
+Der erste Knackpunkt ist das Herausfinden der korrekten Principal URL, laut <a href="https://hilfe.gmx.net/adressbuch/synchronisieren/anwendungen.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">GMX Hilfe</a> sehr einfach.<br />
+Leider hat das hier nicht funktioniert, erst nach etwas Herumsuchen konnte ich <a href="https://www.thunderbird-mail.de/forum/thread/87494-kalender-sync-mit-gmx-seit-gestern-gest&#xF6;rt/?postID=480450#post480450" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">hier</a> herausfinden wie die korrekte URL aufgebaut ist.<br />
+Ein weiteres Problem bei TB ist, dass hier immer wieder Plugins nicht mehr funktionieren oder Funktionalität woanders hin verschoben wird, so auch jetzt (TB 102.3) wieder.<br />
+Man muss hier nun das Plugin CardBook für CardDav verwenden, CalDav funktioniert nun offenbar direkt in TB (ohne Plugin).</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="google-mail-mal-wieder"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Google Mail (mal wieder)</h2>
+<p>Es ist ja bekannt, dass Google (nicht nur bei Mail) immer gern seine eigene Suppe kocht und dabei auch anerkannte Standards (IMAP etc.) immer mal wieder umgeht, verletzt oder sonstwie verbiegt.<br />
+So auch jetzt mal wieder - zu Ende Mai 2022 kam eine Nachricht dass einige 'alte' Mail Clients bezgl. Authentifikation nicht mehr unterstützt würden.
+Bei mir waren das dann K9mail (Android), sowie kmail und claws-mail (Linux).<br />
+Die Abhilfe: im Google Konto <a href="https://ekiwi-blog.de/16815/k9-mail-und-gmail-mit-2-faktor-authentifizierung/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">2FA aktivieren</a> und für die Mail Clients je ein App-Passwort generieren (lassen).<br />
+Achtung bei kmail: hier muss zusätzlich die Auth-Methode auf PLAIN umgestellt werden (kmail hat da auch eine Methode 'Gmail' die bisher schon funktioniert hat, aber zuletzt eben auch problematisch war...)</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="contao-auf-netcup-webhosting"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Contao auf Netcup Webhosting</h2>
+<p>Aus aktuellem Anlass hier kurz etwas zur Installation von Contao 4.9 auf Netcup Webhostings:<br />
+Da gab es zuletzt einige Stolpersteine, die mithilfe des Forums schnell gelöst werden konnten.<br />
+Der entsprechende Thread findet sich <a href="https://forum.netcup.de/netcup-anwendungen/ccp-customer-control-panel/14457-contao-4-9-installation-geht-nicht/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">hier</a>.</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="windoze-support-tips"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Windoze Support Tips <i class="fa fas fa-smile-o"></i></h2>
+<p>Jaja, das leidige Thema... aber es ist eben so: von den Freunden/Bekannten hat halt nach wie vor (fast) jeder Windows, und wenn man denen helfen will, kommt man eben nicht drum herum.<br />
+Deswegen schreibe ich hier mal ein paar Dinge auf, die ich im Fall der Fälle immer wieder brauche, vor allem auch deshalb, weil ich das selber nicht brauche und deswegen auch leicht vergesse.<br />
+Da ist zum ersten das Thema Datensicherung, am besten auf ein NAS:<br />
+Hierfür verwende ich meist <a href="https://freefilesync.org/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">FreeFileSync</a> das so ähnlich arbeitet wie rsync, aber eben mit GUI.<br />
+Das Grundprinzip ist hierbei das Erstellen von FFS Batchfiles, die dann entweder von Hand oder per Aufgabenplanung automatisch aufgerufen werden.
+Die Beschreibung dazu findet sich in den <a href="https://freefilesync.org/manual.php" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Dokus</a>.<br />
+Wichtig ist, dass bei automatischen Backups via Aufgabenplaner dies alles richtig konfiguriert wird, siehe <a href="https://freefilesync.org/manual.php?topic=schedule-batch-jobs" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">hier</a>.  </p>
+<p>Ein weiteres Thema ist Müllbeseitigung: die Windoze Registry hat die Eigenschaft, sich im Lauf der Zeit zuzumüllen, wodurch der Rechner immer langsamer wird.<br />
+Abhilfe kann hier ein sog. Registry Cleaner bringen, z.B. <a href="https://www.chip.de/downloads/Wise-Registry-Cleaner_27156719.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">der hier</a>.</p>
+<p>Zum Tema NAS:<br />
+Hier empfehle ich meistens ein Gerät der Firma Synology, diese sind relativ preiswert und, soweit zumindest meine Erfahrung, zuverlässig.
+Die Geräte beziehen standardmässig ihre interne IP Adresse vom DHCP Server/Router, diese stellt man (im Web-Interface des Routers) am besten so ein, dass das NAS immer dieselbe Adresse bekommt.<br />
+Die Einrichtung selbst ist kein Hexenwerk, nach dem Anschluss ans LAN und Einschalten findet man es normalerweise via <a href="http://find.synology.com" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">find.synology.com</a>.<br />
+Bei neuen Platten (am besten 2 gleiche) muss zuerst ein RAID Typ ausgewählt werden, ich verwende hier meist den Default-Typ.</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="syncthing"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Syncthing</h2>
+<p>Ist etwas das ich schon länger im Hinterkopf hatte, aber doch nicht so recht dazugekommen bin - aber nun zuletzt eben doch <i class="fa fas fa-smile-o"></i>.<br />
+In den letzten Jahren hatte ich zum Übertragen meiner Fotos von den diversen (Android-) Handys/Tablets auf den Desktop PC einfach Filezilla verwendet, zusammen mit <a href="https://f-droid.org/de/packages/be.ppareit.swiftp_free/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Free Ftp Server</a> auf den Mobilgeräten. Das funktioniert recht gut, allerdings muss man eben immer noch jedesmal selber nachschauen, welche Files neu zu übertragen sind (das ist anhand des Änderungsdatums aber nicht schwer).<br />
+Zudem kann es vorkommen, dass Mobilgeräte ab und zu eine neue IP Adresse im LAN bekommen, was bei Filezillas Servermanager etwas ungeschickt ist.<br />
+Also ist auch hier, wie immer, das Bessere des Guten Feind.<br />
+Am liebsten wäre mir ja so etwas wie rsync gewesen, aber für die Mobilgeräte scheint es da nichts vernünftiges zu geben (ja, ich weiss dass <a href="https://f-droid.org/de/packages/com.termux/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Termux</a> auch rsync beinhaltet, der Zugriff von dort auf die Datenbereiche erfordert jedoch, das Gerät zu rooten, was ich zumindest nicht bei jedem machen will).<br />
+Und ja, man kann natürlich auch Mobilgeräte per USB Kabel an den PC anschliessen und dann vom PC aus mit rsync auf deren Dateisystem direkt zugreifen, aber das ist auch nicht das gelbe vom Ei und erfordert ggf. Gefuddel mit den Einstellungen oder gar zusätzliche Apps...<br />
+Das einzig vielversprechende Tool schien mir daher <a href="https://f-droid.org/de/packages/org.amoradi.syncopoli/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Syncopoli</a> zu sein, aber im Gegensatz zum flotten Spruch in dessen Beschreibung hat dieses bei mir nie richtig funktioniert (meist sogar garnicht).<br />
+Deswegen bin ich nun zuletzt doch bei <a href="https://syncthing.net/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Syncthing</a> gelandet.<br />
+Die Desktop Anwendung gibt es für alle relevanten Systeme, und das ist schonmal gut. Und für die Mobilgeräte sind 2 Apps verfügbar: <a href="https://f-droid.org/de/packages/com.nutomic.syncthingandroid/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Syncthing</a> und <a href="https://f-droid.org/de/packages/com.github.catfriend1.syncthingandroid/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Syncthing-Fork</a>.<br />
+Der Fork scheint etwas mehr Funktionen zu haben, dafür erfordert er Android &gt;= 5.0, die Version ohne Fork gibt sich mit &gt;= 4.1 zufrieden, und deswegen ist diese auf meinem alten Huawei Y300 gelandet - der Fork auf den neueren Geräten.<br />
+Die Einrichtung erfordert etwas Probieren und Geduld, hier kommt es u.a. auf die richtige Reihenfolge der Schritte an.<br />
+Immerhin werden im lokalen LAN Geräte automatisch gefunden, und wenn man mal kapiert hat, wie das mit den zu synchronisierenden Ordnern geht, und den Optionen (hier habe ich an den Mobiles jeweils nur Senden eingestellt) dann geht das Ganze automatisch los und ist auch echt flott.<br />
+Soweit erstmal zu den ersten Erfahrungen.<br />
+Eine Anleitung zu Syncthing gibt es übrigens auch in <a href="https://www.pro-linux.de/artikel/2/1895/4,syncthing.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">diesem Pro-Linux Artikel</a>, der sich auch mit Zerotier beschäftigt.</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="zulu-crypt-cryptsetup"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>zuluCrypt</h2>
+<p>Im Verlauf der Reanimation eines älteren Laptops (Sony Vaio VPCCB) habe ich mich entschlossen, mich etwas mehr mit Filesystem Verschlüsselung zu beschäftigen. Unter linux ist ja LUKS das Werkzeug der Wahl für diese Aufgabe, und es wird natürlich auch von debian gleich bei der Installation sozusagen out-of-the-box unterstützt, aber nur zusammen mit LVM.<br />
+Dies ist nun nicht gerade das was ich bevorzuge, und so kam dieser einfache Weg vorerst nicht infrage. Im Zuge der Beschäftigung mit der nachträglichen, händischen Einrichtung einer verschlüsselten Partition bin ich dann auf <a href="https://github.com/mhogomchungu/zuluCrypt" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">zuluCrypt</a> gestossen (das auch im debian Paketsystem enthalten ist, mir aber bisher unbekannt war), und fand das sehr praktisch, da man damit erstmal mit leicht verständlichen GUI-Tools (zuluCrypt-gui und zuluMount-gui) alles einrichten und testen, und nachher für den produktiven Einsatz die entsprechenden CLI Versionen verwenden kann.
+Wenn das dann alles klappt, kann man die neue verschlüsselte Partition automatisch beim Systemstart einbinden, wie auf <a href="http://www.andreas-janssen.de/cryptodisk.html#a7" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">http://www.andreas-janssen.de/cryptodisk.html#a7</a> beschrieben.</p>
+<h2>Vncserver &amp; Client Setup</h2>
+<p>An sich super einfach, ABER einfach mal vnc-server installiert und auf dem Client krdc (oder vncviewer) geht erstmal gar nicht:
+Hierzu muss  </p>
+<ol>
+<li>im Client der richtige Port (5901) angegeben werden</li>
+<li>die richtigen Desktop Einstellungen in der Datei ~/.vnc/xstartup vorgenommen werden:
+<pre><code>#!/bin/sh
+# Uncomment the following two lines for normal desktop:
+unset SESSION_MANAGER
+exec /etc/X11/xinit/xinitrc
+# ^^^ genau das ist wichtig, sonst nur grauer Bildschirm :)
+....</code></pre>
+<p>siehe hierzu auch <a href="https://www.netadmintools.com/art514.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">diesen Artikel</a></p></li>
+</ol>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="vncserver-client-setup"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Vncserver &amp; Client Setup</h2>
+<p>An sich super einfach, ABER einfach mal vnc-server installiert und auf dem Client krdc (oder vncviewer) geht erstmal gar nicht:<br />
+Hierzu muss </p>
+<ol>
+<li>im Client der richtige Port (5901) angegeben werden</li>
+<li>die richtigen Desktop Einstellungen in der Datei ~/.vnc/xstartup vorgenommen werden:
+<pre><code>#!/bin/sh
+# Uncomment the following two lines for normal desktop:
+unset SESSION_MANAGER
+exec /etc/X11/xinit/xinitrc
+# ^^^ genau das ist wichtig, sonst nur grauer Bildschirm :) 
+....</code></pre>
+<p>siehe hierzu auch <a href="https://www.netadmintools.com/art514.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">diesen Artikel</a></p></li>
+</ol>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="own-cloud-auf-netcup-hosting"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>OwnCloud auf Netcup Hosting 04/2020</h2>
+<p>Nachdem ich schon vor mehr als einem Jahr von Dropbox die Nase voll hatte (immer mehr Restriktionen, wie nur noch 3 Clients, nur noch ext4 Filesystem...) bin ich dann recht schnell bei <a href="https://owncloud.org/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">OwnCloud</a> gelandet.<br />
+OwnCloud deswegen, weil <a href="https://nextcloud.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Nextcloud</a> sich schlicht und ergreifend nicht unter den Restriktionen meines <a href="https://www.netcup.de/hosting/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Netcup Webhostings</a> installieren liess.<br />
+Nichts gegen dieses Hosting Paket - dieses bietet VIEL mehr als alle anderen vergleichbaren Hosting Pakete die ich kenne !<br />
+Und, wie gesagt: OwnCloud herunterladen, auspacken und im Web-Frontend den Installer laufen lassen - fertig - ein Klacks.<br />
+Dann noch die entsprechenden Desktop und Mobile Clients installiert und Dropbox vergessen  <i class="fa fas fa-smile-o"></i>.<br />
+So weit so gut.<br />
+Aber auch OwnCloud ist nicht ohne Haken und Ösen - das zeigte sich jetzt beim (versuchten) <a href="https://doc.owncloud.com/server/admin_manual/maintenance/upgrade.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Update</a>, das zwar ganz gut dokumentiert ist, aber beim Webhosting nicht so einfach funktioniert.<br />
+Das liegt daran, dass das dazu benötigte Hilfsprogramm occ, das in der shell aufgerufen wird, andere Pfade sieht (die stehen in der config.php) als der Webserver, weil die shell in einer beschränkten chroot Umgebung läuft.<br />
+Ich habe mir dann so geholfen, dass ich 2 Versionen der config.php angelegt habe, eine mit Webserver-Pfaden und eine mit chroot-Pfaden, und dann je nach Anwendung (Live oder Wartungsmodus) die config.php als Symlink auf die jeweils passende Version angelegt.<br />
+So ging das dann einigermassen, wobei ich bisher nicht herausgefunden habe, warum man das Datenverzeichnis (data) nicht ausserhalb des Installationsverzeichnis legen (und dann natürlich in der Konfig ändern) kann (Das hat zwar augenscheinlich erstmal funktioniert, man konnte im Web-Frontend durch die Verzeichnisse navigieren, aber jeder Versuch, eine Datei zu öffnen oder herunterzuladen ergab ein 'Not Found').<br />
+Naja, ich lasse es jetzt erstmal so - Hauptsache es funktioniert <i class="fa fas fa-smile-o"></i>.<br />
+Update (07/2020):<br />
+Die App updater ist nicht im apps Ordner unterhalb der OC Installation, sondern direkt im OC root - Verzeichnis. Einrichtung siehe <a href="https://doc.owncloud.com/server/admin_manual/maintenance/update.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Doku</a>.<br />
+Und noch eine Anmerkung zum zuvor angemerkten Problem des data Ordners ausserhalb der OC root: dies hängt damit zusammen, dass die Pfade zu den Files wohl (zumindest bei sqlite) absolut in der Datenbank gespeichert sind, das funktioniert natürlich nicht mehr wenn das Verzeichnis nachträglich verschoben wird !<br />
+Siehe hierzu auch <a href="https://doc.owncloud.com/server/admin_manual/maintenance/manually-moving-data-folders.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">diese Anleitung</a>.<br />
+Am besten macht man das aber wohl zusammen mit der Migration von <a href="https://www.2daygeek.com/how-to-migrate-owncloud-from-sqlite-to-mysql-database/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">sqlite nach mysql</a>.<br />
+Und genauso ist es <i class="fa fas fa-smile-o"></i> (ein Tag später...)</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="kde-5-18-f-r-debian"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>KDE 5.18 für Debian 03/2020</h2>
+<p>Debian hat ja traditionell selbst im Entwicklungszweig (SID) ein relativ altes KDE, das zwar gepflegt wird (also Bugfixes aus dem Projekt erhält) aber eben: es ist einfach alt.<br />
+Und gerade weil KDE ja neben Bugfixes ständig viel neues bringt und Funktionen verbessert, ist das ein recht unbefriedigender Zustand.
+Natürlich kann jeder der will, sich selbst ein aktuelles KDE bauen, z.B. mit <a href="https://kdesrc-build.kde.org/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">KDE Build SRC</a> - aber ganz so einfach stellt sich das auch nicht dar.<br />
+Zum Glück hat sich nun der Norbert Preining dieser unbefriedigenden Situation angenommen, siehe seinen <a href="https://www.preining.info/blog/2020/03/kde-plasma-5-18-for-debian/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Blog Post</a> dazu.<br />
+Und inzwischen wurde das mit Hilfe des Suse OBS auch weitgehend automatisiert - eine echt coole Sache !</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="aufbau-neuinstallation-eines-debian-systems-anhand-einer-vorlage-referenz-system"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Aufbau/Neuinstallation eines Debian Systems anhand einer Vorlage (Referenz-System) 03/2020</h2>
+<ol>
+<li>Grundinstallation des Zielsystems, z.B. aus Netinst Image, nur Basis-System + openssh-server + rsync</li>
+<li>Benutzer anlegen, Passwörter vergeben, sudo einrichten (Benutzer in /etc/group bei sudo: eintragen)</li>
+<li>/etc/apt/sources.list und ggf. Dateien aus /etc/apt/sources.list.d vom Referenzsystem auf das Zielsystem kopieren, apt-get update</li>
+<li>Paketliste des Referenzsystems erzeugen: dpkg -l | awk '{print $2}' &gt; pkg.list</li>
+<li>Paketliste auf Zielsystem kopieren und dort mit install.sh (s.u.) installieren</li>
+<li>angepasste Konfiguration(en) vom Referenzsystem auf das Zielsystem kopieren (siehe Anmerkungen Konfiguration)</li>
+<li>eigene SW (z.B. in /usr/local oder $HOME) vom Referenzsystem auf das Zielsystem kopieren</li>
+</ol>
+<p>Anmerkungen Konfiguration:  </p>
+<ul>
+<li>Systemkonfigurationsdateien finden sich praktisch alle unter /etc</li>
+<li>die meisten davon werden automatisch bei der Installation erzeugt bzw. angepasst</li>
+<li>wichtig sind die nachträglich von Hand veränderten Dateien bzw. die durch interaktive Konfiguration z.B. mit dpkg-reconfigure veränderten Dateien, diese werden am besten in ein tar File archiviert und auf dem Zielsystem ausgepackt</li>
+<li>weitere Informationen finden sich im <a href="https://wiki.debian.org/ConfigurationHandling" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Debian Wiki</a> - darin auch ein Hinweis auf das Tool changetrack</li>
+</ul>
+<p>install.sh:</p>
+<pre><code>#!/bin/bash
+#   Install all Packages from Listfile ($1)
+
+Listfile=$1
+if [ -f $Listfile ]; then
+    while IFS= read -r pkg
+    do
+        echo "installing $pkg"
+        sudo apt-get -y install $pkg
+    done &lt; "$Listfile"
+else
+    echo "$Listfile not found, abort"
+fi</code></pre>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="zeitsynchronisierung-debian-10"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Zeitsynchronisierung Debian 10</h2>
+<p>Zuletzt hatte ich Probleme mit der Zeitsynchronisierung an meinem neu aufgesetzten Arbeitsplatz.<br />
+ntpdate wollte nicht mehr richtig funktionieren (meine Uhr war sets um ca. 20 Minuten der echten Zeit voraus) und ein genauerer Blick darauf ergab dass das in Debian 10 deprecated markiert ist.<br />
+Ein wenig Suchen ergab dann <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-time-synchronization-on-debian-10" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">das hier</a> -
+wobei auch der dort beschriebene Weg via ntpd nicht zum Ziel führte, wohl aber die systemd Methode.<br />
+Nachtrag: auch das brachte nicht den wirklichen Erfolg. Wie sich herausstellte, lag das Problem daran, dass die Zeitsynchronisation über den Home Router lief, und der hatte die falsche Zeit <i class="fa fas fa-smile-o"></i>.<br />
+Also nochmal suchen und dann eben laut <a href="https://www.freedesktop.org/software/systemd/man/timesyncd.conf.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">diesem Tip</a> den Timeserver für systemd timesyncd auf pool.ntp.org eingestellt, und nun gehts...</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="apache-virtualhosts-einrichten"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Apache Virtualhosts einrichten</h2>
+<p><a href="https://www.matthias-zeis.com/ressourcen/zfstde/zfbook.creating.a.local.domain.using.apache.virtual.hosts.html" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://www.matthias-zeis.com/ressourcen/zfstde/zfbook.creating.a.local.domain.using.apache.virtual.hosts.html</a><br />
+Kein Hexenwerk, aber man muss auch daran denken, die Virtual Hosts in die /etc/hosts Tabelle einzutragen...</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="request-client-hostname-from-dhcp-server"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Request Client Hostname from DHCP Server</h2>
+<p>Im lokalen Netzwerk werden Clients bevorzugt via DHCP Server eingerichtet - dies ist heutzutage bewährter Standard.<br />
+Probleme treten dabei aber dann auf, wenn einer dieser Clients Dienste anbieten soll - in dem Fall müssen die anderen erst einmal die (dynamische) IP Adresse des Dienste-Anbieters ermitteln.<br />
+Doch es geht auch einfacher, und ganz automatisch:<br />
+<a href="https://askubuntu.com/questions/104918/how-to-get-the-hostname-from-a-dhcp-server" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://askubuntu.com/questions/104918/how-to-get-the-hostname-from-a-dhcp-server</a><br />
+Broadcast Hostname via Zeroconf/Avahi:<br />
+<a href="https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview</a><br />
+Anmerkung: Das alles passiert auch automatisch, wenn man auf dem Client Samba installiert, aber wer braucht bzw. will schon Samba ??</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="docker-auf-debian-installieren"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Docker auf Debian installieren</h2>
+<p><a href="https://www.docker.com/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Docker</a> ist das Tool der Wahl für alle Webentwickler - mit dem passenden Image stellt es genau die gerade benötigte Umgebung zur Verfügung, schlank und schnell.<br />
+Kein Vergleich zur Einrichtung eines kompletten <a href="https://de.wikipedia.org/wiki/LAMP_(Softwarepaket)" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">LAMP</a> Stack, oder gar <a href="https://de.wikipedia.org/wiki/XAMPP" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">XAMPP</a>.<br />
+<a href="https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/</a></p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="fix-start-job-is-running-for-raise-network-interfaces-boot-meldung"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Fix "Start Job is running for raise network interfaces..." Boot Meldung</h2>
+<p>Dies kommt vor (und nervt, weil man dann erst den Timeout abwarten muss) wenn ein Rechner der vorher per Kabel ans Netzwerk angeschlossen war, nun ohne LAN Kabel gestartet wird (und z.B. erst später via Network-Manager/WLAN verbunden wird).<br />
+<a href="https://www.computerbase.de/forum/threads/meldung-waehrend-boot-debian-start-job-is-running-for-raise-network-interfaces.1733184/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://www.computerbase.de/forum/threads/meldung-waehrend-boot-debian-start-job-is-running-for-raise-network-interfaces.1733184/</a></p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="vi-m-copy-paste-clonezilla-ssh-copy-id-rsync"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Vi(m) Copy/Paste mit Maus einrichten</h2>
+<p>Seit Debian 8 (so habe ich es zumindest in Erinnerung) funktioniert Copy/Paste in einem Terminal nicht mehr out-of-the-box.<br />
+Abhilfe:<br />
+set mouse=r<br />
+in ~/.vimrc.<br />
+Siehe auch <a href="https://unix.stackexchange.com/questions/318824/vim-cutpaste-not-working-in-stretch-debian-9" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://unix.stackexchange.com/questions/318824/vim-cutpaste-not-working-in-stretch-debian-9</a></p>
+<hr />
+<h2>Clonezilla - ein Tool zum Sichern und Wiederherstellen von Partitionen/Festplatten</h2>
+<p><a href="https://www.linux-community.de/ausgaben/linuxuser/2013/04/partitionen-sichern-mit-clonezilla/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://www.linux-community.de/ausgaben/linuxuser/2013/04/partitionen-sichern-mit-clonezilla/</a><br />
+Und ja, dd ist einfacher, ABER: clonezilla sichert nur 'echte' Daten, keinen Leer-Raum, und packt das Ganze auch noch - sehr effektiv !</p>
+<hr />
+<h2>SSH Copy-Id</h2>
+<p>Remote Login ohne Username und/oder Passwort:<br />
+<a href="https://www.ssh.com/ssh/copy-id" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">https://www.ssh.com/ssh/copy-id</a><br />
+funktioniert auch für rsync und scp !</p>
+<hr />
+<h2>rsync - das Schweizer Taschenmesser der Daten-Synchronisierung</h2>
+<p>ist immer mal wieder einen genaueren Blick wert (und klar kann man auch jedesmal vorher den Manual Eintrag lesen, wenn man nicht mehr weiss, ob man den trailing slash braucht oder nicht) - aber eingängiger finde ich
+<a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">das hier</a>.</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="blog-links-zerotier-bulkmail-image-resize-baikal-imap"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Dokumente in der OwnCloud</h2>
+<p><a href="/kde-linux-web/tips-and-tricks/dokumente-in-der-cloud">Link zum Artikel</a></p>
+<h2>Zerotier - standortübergreifende Datensicherung</h2>
+<p><a href="/blog/zerotier-standortuebergreifende-datensicherung">Link zum Blogpost</a></p>
+<hr />
+<h2>Bulkmail.py - ein Python Massenmailer (oder auch SPAM-Schleuder)</h2>
+<p><a href="/blog/spam-schleuder-version-2-0">Link zum Blogpost</a></p>
+<hr />
+<h2>Image Resize mit Imagemagick convert</h2>
+<p><a href="/blog/image-resize">Link zum Blogpost</a></p>
+<hr />
+<h2>Baikal - privater Ersatz für Google Kalender und Adressbuch</h2>
+<p><a href="/blog/baikal">Link zum Blogpost</a></p>
+<hr />
+<h2>Serverwartung via Serial Port</h2>
+<p>Das war schon die (vor-)letzte Rettung als ich meinen Router (fli4l auf einem alix Board - natürlich ohne Tastatur/Monitor) vermurkst hatte !<br />
+<a href="/blog/ninicom-cutecom-nostalgie">Link zum Blogpost</a></p>
+<hr />
+<h2>Courier Imap - Einrichten eines lokalen IMAP Servers mit SPAM-Filter</h2>
+<p>Diese Beschreibung ist schon etwas älter, insbesondere bezüglich SPAM, aber die Einrichtung des Courier Servers funktioniert im Prinzip immernoch genauso.<br />
+<a href="/kde-linux-web/spam">Link zum Artikel</a></p>
+<hr />
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="grav-static-site"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Grav Static Site</h2>
+<p>Hier mal ein paar Tips und Stolperfallen zum Thema 'Umwandlung einer Grav Site zu statischem HTML'.<br />
+Das Thema hat mich schon in der Vergangenheit beschäftigt, und wird jetzt so langsam wieder aktuell - ich möchte so etwas irgendwann aus meiner aktuellen Site machen, aus folgenden Gründen:</p>
+<ul>
+<li>meine Site soll mich möglichst lange überleben <i class="fa fas fa-smile-o"></i>.</li>
+<li>sie soll dann so bleiben wie ich sie zuletzt hinterlassen habe.</li>
+<li>sie soll <em>KEINE</em> Wartung mehr benötigen, das heisst:</li>
+<li>keine CMS Updates,</li>
+<li>keine Server OS bzw. Komponenten Updates (Apache und/oder PHP Versionen...).</li>
+<li>ggf. auch wo anders gehostet werden (z.B. GitHub Pages, Firebase...).</li>
+</ul>
+<p>Die beste Lösung dafür ist nun einmal statisches html.<br />
+Und zum Glück gibt es genau dafür zwei Grav Plugins:</p>
+<ul>
+<li><a href="https://github.com/barryanders/grav-plugin-blackhole" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Blackhole</a></li>
+<li><a href="https://github.com/OleVik/grav-plugin-static-generator" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Static Site Generator</a></li>
+</ul>
+<p>Inzwischen habe ich beide ausprobiert, es war aber gar nicht so einfach, die jeweils zum Laufen bzw. zur Erzeugung von brauchbaren Ausgaben zu bewegen <i class="fa fas fa-smile-o"></i>.<br />
+Das lag zum Einen daran, dass ich zunächst glaubte, man könne die erzeugten index.html Dateien in der Ausgabe-Ordnerstruktur einfach so im Browser aufrufen und es würde direkt funktionieren.<br />
+Doch leider nein:</p>
+<ol>
+<li>Es braucht zumindest einen einfachen (lokalen) Webserver - ich verwende dafür den von <a href="https://docs.getpelican.com/en/latest/" target="_blank" rel="nofollow noopener noreferrer" class="external-link no-image">Pelican</a> - ansonsten hagelt es Javascript Fehler (CORS...).</li>
+<li>Vor dem Export (Generierung) muss die Site auf absolute URLs eingestellt werden (in System-&gt;Erweitert).</li>
+<li>bei der Erzeugung der Seiten <em>MUSS</em> die Ausgabe-URL incl. Port angegeben werden, also z.b. http://localhost:8000.</li>
+<li>notwendige PHP-Erweiterungen wie php-xml, php-curl, php-mbstring ... müssen in der lokalen Umgebung installiert sein, sofern die Erzeugung aus dieser per CLI gestartet wird.</li>
+<li>alle Ordner, insbesondere in cache/* müssen beschreibbar sein.</li>
+<li>Schlussendlich müssen die erzeugten index.html Dateien in die Webroot der neuen statischen Site kopiert werden.</li>
+<li>Am einfachsten legt man dazu eine Kopie der aktiven Grav Seite an (z.B. durch Auspacken eines Backups) und kopiert da die index.html Dateien hinein, die Markdown Dateien (*.md) können gelöscht werden.</li>
+<li>Danach sollte nach Start des lokalen Webservers mit <code>pelican -l -o ./web</code> aus dem übergeordneten Ordner die statische Seite durch Aufruf von http://localhost:8000 sichtbar sein. </li>
+</ol>
+<p>Zur Live-Schaltung der statischen Seite (z.B. https://hoernerfranzracing.de/werner) muss natürlich bei der Erzeugung der index.html Dateien die Output URL der Live Seite richtig spezifiziert werden !<br />
+Soweit hat das jetzt mit dem Blackhole Plugin funktioniert - das andere bietet noch deutlich mehr Optionen, die ich allerdings bisher nicht getestet habe.</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+            <div id="web-de-galore"></div>
+        
+<section class="section modular-text  bg-gray">
+    <section class="container ">
+        <div class="columns right">
+                        <div class="column col-12">
+                <h2>Web.de Galore</h2>
+<p>Nun wird es endlich mal Zeit, mich über den unsäglichen Schrott-Mail-Provider web.de auszulassen, aus aktuellem Anlass.<br />
+Was ist passiert ?<br />
+Wieder einmal konnten einige Empfänger eine per BCC an eine Gruppe versendete Email nicht lesen, betroffen waren NUR web.de Nutzer - und zwar einfach deswegen, weil die Mail signiert war, was dazu führte, dass die Empfänger den Anhang (=die Signatur) nicht öffnen konnten, UND offenbar deswegen der eigentliche Text der Mail so klein dargestellt wurde, dass er praktisch nicht lesbar war, und noch schlimmer: darin enthaltene Links nicht als solche dargestellt (und damit nicht anklickbar) waren.<br />
+Aber das ist ja nur die Spitze des Eisbergs, dazu kommen noch die schon immer vorhandenen Fehler bzw. Unzulänglichkeiten:</p>
+<ul>
+<li>es passiert immer wieder, dass weitergeleitete Mails nicht geöffnet werden können, allerdings ist das nicht konsistent, und auch nicht erkennbar, wann und warum das bei wem passiert.</li>
+<li>es gibt keine vollständige IMAP Ordnerstruktur, diese ist auf EINE Ebene beschränkt, Unterordner lassen sich NICHT anlegen.</li>
+<li>IMAP bzw. POP3 für externe MUAs (Thunderbird, Outlook...) muss explizit freigeschaltet werden.</li>
+<li>die Doku zur Einrichtung von CalDav/CardDav (Adressen/Kalender) ist mehr als mangelhaft bzw. sogar falsch.</li>
+<li>HTML lässt sich nicht ausschalten (Sicherheitsrisiko).</li>
+<li>der übliche Werbe-SPAM (ok, das machen die anderen Massenmail-Provider auch).</li>
+</ul>
+<p>Und noch einiges mehr das mir gerade nicht mehr einfällt <i class="fa fas fa-smile-o"></i>.<br />
+Fazit: Finger weg von diesem Müll - sogar gmx.de (gehört auch zu United Internet) ist besser.<br />
+Und auch Google Mail (gmail) - hier kommt noch dazu, dass viele Android Nutzer gar nicht wissen dass sie eine Google Mail Adresse haben (ohne die das Handy gar nicht nutzbar wäre) oder diese nicht nutzen wollen, da sie das Tracking von Google und deren sonstige Eingriffe in die Privatshäre fürchten.<br />
+Gleichzeitig sind 99.9% von denen WhatsApp User, und damit ist dieses Argument schon an sich ad Absurdum geführt <i class="fa fas fa-smile-o"></i>.<br />
+Also Leute: tut euch den Gefallen und verwendet einen seriösen Mail-Provider (mailbox.org, posteo, protonmail... - es gibt mehr als genug Auswahl) oder wenigstens einen nicht ganz so schrottigen !</p>
+            </div>
+                    </div>
+    </section>
+                <a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+    </section>
+
+        </div>
+    </article>
+										<a href="javascript:" id="return-to-top">
+
+<i class="fa fas fa-chevron-up"></i>
+</a>
+					</main>
+	
+		
+	    		<script src="/werner/assets/3c211ab80e5b4172dfc6a545e993b4fe.js"></script>
+ 	
+            <script>
+        // singlePageNav initialization & configuration
+        $('ul.navigation').singlePageNav({
+            offset: $('#header').outerHeight(),
+            filter: ':not(.external)',
+            updateHash: true,
+            currentClass: 'active'
+        });
+        </script>
+    	</body>
+</html>
