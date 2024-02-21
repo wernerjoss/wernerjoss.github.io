@@ -10,21 +10,21 @@
 <meta name="description" content="Motorradsport unter Freunden" />
 
 		<link rel="canonical" href="./allgemein/bpr" />
-				<link rel="preload" href=/werner/user/themes/myvela/fonts/fontawesome-webfont.woff2?v=4.7.0  as="font" crossorigin="">
-		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300.woff2  as="font" crossorigin="">
-		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-300italic.woff2  as="font" crossorigin="">
-		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-regular.woff2  as="font" crossorigin="">
-		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-italic.woff2  as="font" crossorigin="">
-		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500.woff2  as="font" crossorigin="">
-		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-500italic.woff2  as="font" crossorigin="">
-		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700.woff2  as="font" crossorigin="">
-		<link rel="preload" href=/werner/user/themes/myvela/fonts/roboto-v20-latin-700italic.woff2  as="font" crossorigin="">
+				<link rel="preload" href=/user/themes/myvela/fonts/fontawesome-webfont.woff2?v=4.7.0  as="font" crossorigin="">
+		<link rel="preload" href=/user/themes/myvela/fonts/roboto-v20-latin-300.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/user/themes/myvela/fonts/roboto-v20-latin-300italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/user/themes/myvela/fonts/roboto-v20-latin-regular.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/user/themes/myvela/fonts/roboto-v20-latin-italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/user/themes/myvela/fonts/roboto-v20-latin-500.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/user/themes/myvela/fonts/roboto-v20-latin-500italic.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/user/themes/myvela/fonts/roboto-v20-latin-700.woff2  as="font" crossorigin="">
+		<link rel="preload" href=/user/themes/myvela/fonts/roboto-v20-latin-700italic.woff2  as="font" crossorigin="">
 
 																						 			 		
 																
 							<link href="/assets/d6502bb3b9720afeb16e07f83ef1b182.css" type="text/css" rel="stylesheet">
 
-			<script src="/werner/assets/a9e5ab09eff08c476502ecc0633daeb2.js"></script>
+			<script src="/assets/a9e5ab09eff08c476502ecc0633daeb2.js"></script>
 <script>
 window.addEventListener("load", function() {
 
@@ -177,7 +177,7 @@ $(document).ready(function(){
 			  <div class="flex-container">
     <a href="/" class="sidebar-brand">
               <img
-          src="/werner/user/themes/myvela/images/logo.png"
+          src="/user/themes/myvela/images/logo.png"
           style="object-fit: contain;
                           height:165px;
                                       max-width: 100%;
@@ -347,17 +347,17 @@ Zur Zeit werden folgende PCI Einsteckkarten unterstützt:</p>
 <p>Das Programm arbeitet generell mit Rohdaten, d.h. es wird der reine Zeitverlauf einer Messung (=Beschleunigungs/Bremsvorgang des Schwungrads) gespeichert, die Ergebnisse (P,Md = f(Drehzahl)) werden erst im 2. Schritt mithilfe der aktuellen Versuchsparameter (Uebersetzung, Gang, Motordaten...) berechnet.
 Allgemeine Bedienungshinweise:
 Vor jeder Messung müssen die relevanten Parameter (Uebersetzungen, gefahrener Gang...) definiert werden, dies erfolgt im Menüpunkt 'Edit Setup':
-<img alt="" src="/werner/user/pages/uploads/bilder/bpr/edit.png?g-007d4908" /></p>
+<img alt="" src="/user/pages/uploads/bilder/bpr/edit.png?g-007d4908" /></p>
 <p>Einmal hier eingestellte Parameter bleiben solange erhalten, bis sie geändert werden, darüberhinaus werden diese beim Progragrammende gespeichert und beim nächsten Start automatisch eingelesen, sodass sie nicht immer wieder neu eingegeben werden müssen (Sessionmanagement). Die Einstellungsdatei hierzu heisst bpr.ini, folgt in ihrem Aufbau dem bekannten Standard für .ini Dateien und kann mittels Texteditor bearbeitet werden.<br />
 Zusätzlich können Vorlagen dieser Datei (z.B. für verschiedene Motoren) unter anderem Namen gespeichert und später eingelesen/direkt verwendet werden ('Load Setup from').
 Die eigentliche Messung wird mittels Menüpunkt 'Start' aktiviert:</p>
-<p><img alt="" src="/werner/user/pages/uploads/bilder/bpr/start.png?g-007d4908" /></p>
+<p><img alt="" src="/user/pages/uploads/bilder/bpr/start.png?g-007d4908" /></p>
 <p>hierbei wird, falls die unter 'Setup' eingestellte Startdrehzahl grösser 0 ist, zunächst ein 'virtueller Drehzahlmesser' aktiviert, der die aktuelle Motordrehzahl anzeigt.
 Erst wenn diese überschritten wird, beginnt der eigentliche Messvorgang. Dies hat den Vorteil, dass man die Anlage einfacher allein bedienen kann (d.h. man kann am PC die Messung starten und dann erst am Prüfstand den Motor bedienen).
 Während der Messung werden keine Ergebnisse angezeigt, allerdings kann man den Fortschritt der Messung an der Anzahl der aktuell erfassten Impulse verfolgen, die Messung ist beendet, wenn die voreingestellte Impulszahl erreicht ist. Die Messung kann allerdings jederzeit durch die 'esc' Taste abgebrochen werden, was auch automatisch dann passiert, wenn nach Ablauf der unter 'Timeout' eingestellten Zeit nicht die voreingestellte Anzahl von Messwerten erreicht ist.
 Nach der Messung wird zunächst der Zeitverlauf der Motordrehzahl angezeigt, hier kann man einfach erkennen, ob die voreingestellte Impulszahl zum praktischen Messablauf passt (es empfiehlt sich, ausser dem kompletten Hochlauf bis zum Erreichen der Maximaldrehzahl auch den Auslaufvorgang mitzuerfassen, hieraus kann im Nachgang die Verlustleistung bzw. das Bremsmoment des Prüfstands errechnet werden).<br />
 Anmerkung zur Messfunktion: das Programm zeigt in der Titelleiste die vom Treiber identifizierte Messkarte (PCI1389 oder NI6602) an - steht hier nichts, so ist entweder wirklich keine Messkarte vorhanden oder es liegt ein System- bzw. Treiberfehler vor (in diesem Fall hilft in der Regel ein Neustart des Rechners - das Windoze-Standardrezept :).Die interessanten Messergebnisse (Leistungskurve) erhält man anschliessend über den Menüpunkt 'Analysis':
-<img src="/werner/uploads/bilder/bpr/ana.png" alt="" />
+<img src="/uploads/bilder/bpr/ana.png" alt="" />
 Hier werden Einstellungen zur Skalierung (Autoscale, Ymin, Xmax...) vorgenommen, ebenso wie Parameter die direkten Einfluss auf die berechneten Ergebnisse haben:</p>
 <ul>
     <li>Cutoff: Eckfrequenz eines Kaiser-Bessel Filters (stark vom Messverlauf abhängig)</li>
@@ -401,6 +401,6 @@ und darf ohne Erlaubnis/Zustimmung nicht an Dritte weitergegeben werden!</p>    
 					</main>
 	
 		
-			<script src="/werner/assets/3c211ab80e5b4172dfc6a545e993b4fe.js"></script>
+			<script src="/assets/3c211ab80e5b4172dfc6a545e993b4fe.js"></script>
  		</body>
 </html>
