@@ -1,0 +1,129 @@
+<html>
+<title>bprpy.html</title>
+<body>
+<h2>
+<center>
+Kurzbeschreibung/Anleitung zum Programm bpr.py
+</center>
+<center>
+Copyright (c) Werner Joss, 2015
+</center>
+</h2>
+bpr.py ist ein (python-)Programm zum Ermitteln der Leistungskurve (P, Md = f(Drehzahl)) von (Verbrennungs-)Motoren
+an einem BeschleunigungPR&uuml;fstand.<br>
+Hierbei wird mittels einer hochgenauen Zeitverlaufs-Messtechnik der exakte Verlauf des Beschleunigungsvorgangs
+einer bekannten Schwungmasse gemessen, aus dem sich danach die o.g. Leistungskurve errechnen l&auml;sst.<br>
+Konkret wird hierbei das Ausgangssignal eines Magnetgebers auf dem Schwungrad verwendet, dieser erzeugt mittels nachgeschalteter Elektronik beim Passieren jedes Zahns des Schwungrades (=Zahnrad) einen Rechteckimpuls.
+Der Zeitpunkt des Eintreffens jedes dieser Impulse wird nun nicht mehr wie bisher mit einer speziellen
+PC-Einsteckkarte gemessen, sondern es wird mit dem Standard-Soundrecorderprogramm via MIC-IN der Soundkarte
+das analoge Gebersignal (Spannungsverlauf) aufgezeichnet,
+genauso wie bei <a href="http://atom007.heimat.eu/tmt/gsf_dyno_de.html">GSF dyno</a>, aus dem die relevanten Zeitpunkte der einzelnen Magnetgeberimpulse berechnet werden koennen.<br>
+Dies sind dann auch die Rohdaten fuer die weitere Berechnung, das heisst, es macht Sinn,
+aus den Sound(=.wav) Dateien direkt diese Zeitdaten zu berechnen und nur diese zu behalten,
+denn sie brauchen sehr viel weniger Speicherplatz (gezipped ~ 10%) als die .wav Dateien.<br>
+Das Programm arbeitet also generell mit dem reinen Zeitverlauf der Geberimpulse
+(=Beschleunigungs/Bremsvorgang des Schwungrads), die Ergebnisse (P,Md = f(Drehzahl)) werden daraus mithilfe der aktuellen Versuchsparameter (&Uuml;bersetzung, Gang, Motordaten...) berechnet.<br>
+<p></p>
+Allgemeine Bedienungshinweise:<br>
+Vor jeder Messung m&uuml;ssen die relevanten Parameter (&Uuml;bersetzungen, gefahrener Gang...) definiert 
+oder zumindest geprueft werden, dies erfolgt im Men&uuml;punkt 'Edit Setup':<br>
+<p>
+<img src='bprpy_edit.png' align=center hspace=20 vspace=10><br>
+</p>
+Hier werden Einstellungen zur Skalierung (Autoscale, Ymin, Xmax...) vorgenommen, ebenso wie Parameter die direkten Einfluss auf die berechneten Ergebnisse haben:
+<p>
+<img src='bprpy_editSetup.png'align=center hspace=20 vspace=10><br>
+</p>
+<p>
+Einmal hier eingestellte Parameter bleiben solange erhalten, bis sie ge&auml;ndert werden, dar&uuml;berhinaus werden diese beim Progragrammende gespeichert und beim n&auml;chsten Start automatisch eingelesen (und angezeigt), 
+sodass sie nicht immer wieder neu eingegeben werden m&uuml;ssen (Sessionmanagement).
+Die Einstellungsdatei hierzu heisst bpr.ini, folgt in ihrem Aufbau dem bekannten Standard f&uuml;r .ini Dateien und kann mittels Texteditor (direkt aus dem Menu: Edit ini File) bearbeitet werden.<br>
+Zus&auml;tzlich k&ouml;nnen Vorlagen dieser Datei (z.B. f&uuml;r verschiedene Motoren) unter anderem Namen gespeichert und sp&auml;ter eingelesen/direkt verwendet werden ('File - Load Ini File').<br>
+Die eigentliche Messung wird mittels Men&uuml;punkt 'Start Soundrecorder' aktiviert:<br>
+</p>
+<p>
+<img src='bprpy_start.png' align=center hspace=20 vspace=10><br>
+</p>
+<p>
+Nach der Messung sollte zun&auml;chst der Zeitverlauf der Motordrehzahl berechnet werden, 
+hier kann man einfach erkennen, ob die voreingestellte Impulszahl zum praktischen Messablauf passt 
+bzw. ob die Getriebedaten korrekt sind (es empfiehlt sich, ausser dem kompletten Hochlauf bis zum Erreichen der Maximaldrehzahl auch den Auslaufvorgang mitzuerfassen, hieraus kann im Nachgang die Verlustleistung bzw. das Bremsmoment des Pr&uuml;fstands errechnet werden).<br>
+Das folgende Beispiel zeigt eine Messung mit mehreren Hochl&auml;ufen 'am St&uuml;ck':
+</p>
+<img src='bprpy_rpm.png' align=center hspace=20 vspace=10><br>
+<p>
+Die Messergebnisse (Leistungskurve) erh&auml;lt man anschliessend &uuml;ber die Auswahl des Diagrammtyps Drehmoment/Leistung in Setup/Grafik:<br>
+</p>
+<p>
+<img src='bprpy_ana.png'align=center hspace=20 vspace=10><br>
+</p>
+Hinweise zu den Einstellungen im Setup:<br>
+Alle Einstellungen k&ouml;nnen sowohl interaktiv im GUI (Edit Setup) oder durch direktes Bearbeiten der Setupdatei
+(Edit IniFile) vorgenommen werden.<br>
+Die Grafik erlaubt die Ausgabe von 2 verschiedenen Diagrammtypen: Drehzahl und Drehmoment/Leistung.
+Das Drehzahldiagramm wird immer automatisch skaliert, beim Drehmoment/Leistungsdiagramm ist die
+Voreinstellung 'manuell', hier werden aber beim ersten Aufruf gleich sinnvolle Werte vorgegeben.
+<p></p>
+Die Parameter im Submenu Analysis:
+<ul>
+<li>Prescale: Vorteiler</li>
+<li>Navg: Anzahl Werte f&uuml;r gleitende Mittelung (=Tiefpassfilter)</li>
+</ul>
+beeinflussen die Berechnung der Ergebnisse aus den Rohdaten-
+Hier sollte eine optimale Einstellung durch Versuche ermittelt und anschliessend durchweg weiterverwendet werden, um eine direkte Vergleichbarkeit der Messergebnisse sicherzustellen - die Voreinstellung 16/16 hat sich f&uuml;r unseren Pr&uuml;fstand ganz gut bew&auml;hrt.<br>
+Die Rubrik 'Custom Time Range' dient dazu, nur ein (selbst-)definiertes Zeitfenster einer Messdatei auszuwerten,
+z.B. dann wenn diese mehrere Hochl&auml;ufe 'am St&uuml;ck' beinhaltet (siehe Beispiel).<br>
+Die technischen Daten sowie die Umgebungsbedingungen sind die Grundlage jeder Ergebnisberechnung - daher muss
+unbedingt sichergestellt werden, dass diese auch stimmen :)<br>
+Achtung: beim Erzeugen einer .dat/.asc Datei aus einer Sounddatei (.wav) werden die aktuellen Werte aus diesen
+Rubriken mit in die .dat Datei gespeichert, sodass beim sp&auml;teren Laden dieser Datei immer die bei der Messung
+aktuellen Werte verwendet werden - dabei werden dann allerdings die im Setup voreingestellten Werte &uuml;berschrieben!<br>
+In der Rubrik Sonstiges werden allgemeine Ablaufparamter eingestellt, die in der Regel sp&auml;ter kaum noch ver&auml;ndert werden, weiteres hierzu im Folgenden.
+<p></p>
+Hinweise zum Umgang mit den Messdaten-Dateien sowie deren Auswertung:<br>
+<p></p>
+Die vom Soundrecorder erzeugten .wav Dateien enthalten aufgrund der hochfrequenten, analogen Abtastung des Gebersignals sehr viel Overhead, wirklich gebraucht werden davon nur die im ersten Schritt daraus berechneten
+Zeitpunkte jedes Geberimpulses.<br>
+Deswegen ist es empfehlenswert, direkt .dat/.asc Dateien zu erzeugen (Flag Create Diadem Files) und diese ggf. gleich noch zu kompiemieren (compress Data), wodurch der ben&ouml;tigte Speicherplatz auf ca. 10% reduziert wird.<br>
+Desweiteren werden bei dieser Vorgehensweise wie zuvor beschrieben, die relevanten Parameter (&Uuml;bersetzungen,
+Tr&auml;gheitsmomente, Temperatur..) gleich zusammen mit den Messdaten gespeichert, wodurch sp&auml;tere Unsicherheiten bzw. Fehler bei der Auswertung vermieden werden.<br>
+Ein .dat/.asc Messdatensatz besteht immer aus 2 zusammengeh&ouml;renden Dateien:
+<ol>
+<li>sog. Headerdaten - testXYZ.dat</li>
+<li>die eigentlichen Messdaten - testXYZ.asc</li>
+</ol>
+entsprechend der Konventionen f&uuml;r das DIADEM Messdaten-Format - siehe Datei <a href="http://dl.getdropbox.com/u/1760509/bpr/dmheader.pdf">dmheader.pdf</a>.<br>
+Deswegen unbedingt beachten:
+<ul>
+<li>Dateien immer nur zusammen kopieren/weitergeben</li>
+<li>Dateien nicht nachtr&auml;glich umbenennen (falls doch: auch Eintrag/Verweis auf .asc in .dat Datei &auml;ndern!)</li>
+<li>beide Dateien (.dat/.asc) sind reine Textdateien und k&ouml;nnen daher mit jedem Texteditor ge&ouml;ffnet (bearbeitet - s.o.) werden</li>
+</ul>
+<!--
+Zus&auml;tzlich verf&uuml;gt das Messprogramm &uuml;ber eine Ergebnis-Exportfunktion (File:Export Results),
+hierbei wird eine Textdatei (.txt/.csv) erzeugt, die in 3 Spalten (Drehzahl,Drehmoment,Leistung) die Berechnungsergebnisse enth&auml;lt.
+Diese Datei kann dann z.B. mit excel (.csv), matlab/octave/gnuplot (.txt) weiterverarbeitet werden.
+-->
+<p></p>
+Hinweise zur Installation:<br>
+Das Programm kann auch als reines Auswertprogramm auf PC's ohne Soundkarte installiert werden. Hierzu sind folgende Voraussetzungen notwendig:
+<ul>
+<li>python 2.7 oder neuer.</li>
+<li>Diverse python Zusatzmoule: sys,  os,  time,  datetime,  math,  wave,  struct,  platform,  shutil,  zipfile,  zlib (Standard)</li>
+<li>sowie: matplotlib, PyQt4, iniparse (Nonstandard).</li>
+<li>Optional: <a href="http://sourceforge.net/projects/gnuplot/files/">(W)gnuplot</a>.</li>
+</ul>
+Das Programmpaket beinhaltet die compilierten python Dateien sowie einige Beispieldaten, es wurde unter Linux entwickelt (hier werden die Nonstandard-Zusatzmodule einfach mit dem Paketmanager installiert) und auch unter Windows (XP) getestet (wo sich die Installation der notwendigen python-Module nicht
+ganz so einfach gestaltet - siehe die mitgelieferte Datei <a href="bprpy_wininst.txt">bprpy_wininst.txt</a>).
+<p></p>
+Rechtlicher Hinweis - Copyright (c) 2015, Werner Joss:<br>
+Dieses Programm wurde erstellt und ist Eigentum von<br>
+<p></p>
+Werner Joss<br>
+Robert-Kochstr.2<br>
+76351 Linkenheim<br>
+<p></p>
+und darf von Privatpersonen kostenfrei verwendet werden, nicht jedoch fuer kommerzielle Zwecke
+(in diesem Fall ist vorher der Autor zu kontaktieren).
+</body>
+</html>

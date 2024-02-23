@@ -1,0 +1,94 @@
+<html>
+<title>bpr.html</title>
+<body>
+<h2>
+<center>
+Kurzbeschreibung/Anleitung zum Programm bpr.exe.
+</center>
+<center>
+Copyright (c) Werner Joss, 2009,2010
+</center>
+</h2>
+bpr.exe ist ein Programm zum Ermitteln der Leistungskurve (P, Md = f(Drehzahl)) von (Verbrennungs-)Motoren
+an einem BeschleunigungPR&uuml;fstand.<br>
+Hierbei wird mittels einer hochgenauen Zeitverlaufs-Messtechnik der exakte Verlauf des Beschleunigungsvorgangs
+einer bekannten Schwungmasse gemessen, aus dem sich danach die o.g. Leistungskurve errechnen l&auml;sst.<br>
+Konkret wird hierbei das Ausgangssignal eines Magnetgebers auf dem Schwungrad verwendet, dieser erzeugt mittels nachgeschalteter Elektronik beim Passieren jedes Zahns des Schwungrades (=Zahnrad) einen Rechteckimpuls.
+Der Zeitpunkt des Eintreffens jedes dieser Impulse wird nun mithilfe einer speziellen PCI Einsteckkarte mit einer
+Zeitreferenzbasis von 5 MHz aufegzeichnet, dies ist dann die Basis zur Berechnung der Leistungskurve.<br>
+Zur Zeit werden folgende PCI Einsteckkarten unterst&uuml;tzt:
+<ul>
+<li>ERMA PCI 1389</li>
+<li>National Instruments PCI6602</li>
+</ul>
+Das Programm arbeitet generell mit Rohdaten, d.h. es wird der reine Zeitverlauf einer Messung (=Beschleunigungs/Bremsvorgang des Schwungrads)
+gespeichert, die Ergebnisse (P,Md = f(Drehzahl)) werden erst im 2. Schritt mithilfe der aktuellen Versuchsparameter
+(Uebersetzung, Gang, Motordaten...) berechnet.<br>
+<p></p>
+Allgemeine Bedienungshinweise:<br>
+Vor jeder Messung m&uuml;ssen die relevanten Parameter (Uebersetzungen, gefahrener Gang...) definiert werden,
+dies erfolgt im Men&uuml;punkt 'Edit Setup':<br>
+<p></p>
+<img src='edit.bmp'><br>
+<p></p>
+Einmal hier eingestellte Parameter bleiben solange erhalten, bis sie ge&auml;ndert werden, dar&uuml;berhinaus werden diese beim Progragrammende gespeichert und beim n&auml;chsten Start automatisch eingelesen, sodass sie nicht immer wieder neu eingegeben werden m&uuml;ssen (Sessionmanagement).
+Die Einstellungsdatei hierzu heisst bpr.ini, folgt in ihrem Aufbau dem bekannten Standard f&uuml;r .ini Dateien und kann mittels Texteditor bearbeitet werden.<br>
+Zus&auml;tzlich k&ouml;nnen Vorlagen dieser Datei (z.B. f&uuml;r verschiedene Motoren) unter anderem Namen gespeichert und sp&auml;ter eingelesen/direkt verwendet werden ('Load Setup from').<br>
+Die eigentliche Messung wird mittels Men&uuml;punkt 'Start' aktiviert:<br>
+<p></p>
+<img src='start.bmp'><br>
+<p></p>
+hierbei wird, falls die unter 'Setup' eingestellte Startdrehzahl gr&ouml;sser 0 ist, zun&auml;chst ein 'virtueller Drehzahlmesser' aktiviert, der die aktuelle Motordrehzahl anzeigt.<br>
+Erst wenn diese &uuml;berschritten wird, beginnt der eigentliche Messvorgang. Dies hat den Vorteil, dass man die Anlage einfacher allein bedienen kann (d.h. man kann am PC die Messung starten und dann erst am Pr&uuml;fstand den Motor bedienen).<br>
+W&auml;hrend der Messung werden keine Ergebnisse angezeigt, allerdings kann man den Fortschritt der Messung an der Anzahl der aktuell erfassten Impulse verfolgen, die Messung ist beendet, wenn die voreingestellte Impulszahl erreicht ist. Die Messung kann allerdings jederzeit durch die 'esc' Taste abgebrochen werden, was auch automatisch dann passiert, wenn nach Ablauf der unter 'Timeout' eingestellten Zeit nicht die voreingestellte Anzahl von Messwerten erreicht ist.<br>
+Nach der Messung wird zun&auml;chst der Zeitverlauf der Motordrehzahl angezeigt, hier kann man einfach erkennen, ob die voreingestellte Impulszahl zum praktischen Messablauf passt (es empfiehlt sich, ausser dem kompletten Hochlauf bis zum Erreichen der Maximaldrehzahl auch den Auslaufvorgang mitzuerfassen, hieraus kann im Nachgang die Verlustleistung bzw. das Bremsmoment des Pr&uuml;fstands errechnet werden).<br>
+<p></p>
+Anmerkung zur Messfunktion: das Programm zeigt in der Titelleiste die vom Treiber identifizierte Messkarte (PCI1389 oder NI6602) an - steht hier nichts, so ist entweder wirklich keine Messkarte vorhanden oder es liegt ein System- bzw. Treiberfehler vor (in diesem Fall hilft in der Regel ein Neustart des Rechners - das Windoze-Standardrezept :).
+<p></p>
+Die interessanten Messergebnisse (Leistungskurve) erh&auml;lt man anschliessend &uuml;ber den Men&uuml;punkt 'Analysis':<br>
+<p></p>
+<img src='ana.bmp'><br>
+<p></p>
+Hier werden Einstellungen zur Skalierung (Autoscale, Ymin, Xmax...) vorgenommen, ebenso wie Parameter die direkten Einfluss auf die berechneten Ergebnisse haben:
+<ul>
+<li>Cutoff: Eckfrequenz eines Kaiser-Bessel Filters (stark vom Messverlauf abh&auml;ngig)</li>
+<li>Navg: Anzahl Werte f&uuml;r gleitende Mittelung (=Tiefpassfilter)</li>
+</ul>
+Hier sollte eine optimale Einstellung durch Versuche ermittelt und anschliessend durchweg weiterverwendet werden, um eine direkte Vergleichbarkeit der Messergebnisse sicherzustellen.<br>
+<p></p>
+Weitere Hinweise zum Umgang mit den Messdaten-Dateien sowie deren Auswertung:<br>
+<p></p>
+Ein Messdatensatz besteht immer aus 2 zusammengeh&ouml;renden Dateien:
+<ol>
+<li>sog. Headerdaten - testXYZ.dat</li>
+<li>die eigentlichen Messdaten - testXYZ.asc</li>
+</ol>
+entsprechend der Konventionen f&uuml;r das DIADEM Messdaten-Format - siehe Datei <a href="http://dl.getdropbox.com/u/1760509/bpr/dmheader.pdf">dmheader.pdf</a>.<br>
+Deswegen unbedingt beachten:
+<ul>
+<li>Dateien immer nur zusammen kopieren/weitergeben</li>
+<li>Dateien nicht nachtr&auml;glich umbenennen (falls doch: auch Eintrag/Verweis auf .asc in .dat Datei &auml;ndern!)</li>
+<li>beide Dateien (.dat/.asc) sind reine Textdateien und k&ouml;nnen daher mit jedem Texteditor ge&ouml;ffnet (bearbeitet - s.o.) werden</li>
+</ul>
+Zus&auml;tzlich verf&uuml;gt das Messprogramm &uuml;ber eine Ergebnis-Exportfunktion (File:Export Results),
+hierbei wird eine Textdatei (.txt/.csv) erzeugt, die in 3 Spalten (Drehzahl,Drehmoment,Leistung) die Berechnungsergebnisse enth&auml;lt.
+Diese Datei kann dann z.B. mit excel (.csv), matlab/octave/gnuplot (.txt) weiterverarbeitet werden.
+<p></p>
+Hinweise zur Installation auf PC's ohne Messhardware:<br>
+Das Programm kann auch als reines Auswertprogramm auf PC's ohne Messkarte installiert werden. Hierzu sind folgende Voraussetzungen notwendig:
+<ul>
+<li>Windows 95 oder neuer.</li>
+<li>NI CVI-RTE (bis Win98: <a href="http://dl.getdropbox.com/u/1760509/bpr/cvirt551.zip">Version 5.5</a>, ab Win2000: <a href="http://dl.getdropbox.com/u/1760509/bpr/cvirte70.zip">Version 7.0</a>).</li>
+<li><a href="http://erma-electronic.de/Files/zip/pci1389s01.zip">PCI139s01.dll</a> muss im Programmverzeichnis vorhanden sein.</li>
+<li>Optional: <a href="http://sourceforge.net/projects/gnuplot/files/">Wgnuplot</a>.</li>
+</ul>
+Rechtlicher Hinweis - Copyright (c) 2009,20010:<br>
+Dieses Programm wurde erstellt und ist Eigentum von<br>
+<p></p>
+Werner Joss<br>
+Robert-Kochstr.2<br>
+76351 Linkenheim<br>
+<p></p>
+und darf ohne Erlaubnis/Zustimmung nicht an Dritte weitergegeben werden!
+</body>
+</html>

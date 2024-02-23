@@ -1,0 +1,10 @@
+Installation bpr.py in Windoze, getestet auf XP Pro 19.3.15:
+1.	Install python 2.7, Option 'add to PATH' wichtig!
+2.	install pyqt4 von http://www.riverbankcomputing.co.uk/software/pyqt/download
+3.	install numpy 1.9.2 f. python 2.7 von http://sourceforge.net/projects/numpy/files/NumPy/1.9.2/
+4. install C++ python compiler von http://www.microsoft.com/en-us/download/details.aspx?id=44266
+5.	install wave, matplotlib, iniparse, python-dateutil, six, shutil, zfile, zlib via pip (aus cmd.exe)
+6.	unpack bprpy.zip
+7.	kopieren aller *.py files ausser bpr.py nach C:\python27\lib
+8.	run 'python bpr.py' aus cmd.exe, ggf. noch fehlende libs nachinstallieren (pip install <lib> oder im inet suchen wenn pip nichts findet)
+

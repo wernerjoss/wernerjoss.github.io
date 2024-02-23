@@ -313,7 +313,7 @@ $(document).ready(function(){
             value=""
             data-search-invalid="Bitte geben Sie mindestens 3 Zeichen ein"
             data-search-separator=":"
-            data-search-input="/werner/search/query"
+            data-search-input="/search/query"
         />
             </form>
 </div>
@@ -347,11 +347,11 @@ Zur Zeit werden folgende PCI Einsteckkarten unterstützt:</p>
 <p>Das Programm arbeitet generell mit Rohdaten, d.h. es wird der reine Zeitverlauf einer Messung (=Beschleunigungs/Bremsvorgang des Schwungrads) gespeichert, die Ergebnisse (P,Md = f(Drehzahl)) werden erst im 2. Schritt mithilfe der aktuellen Versuchsparameter (Uebersetzung, Gang, Motordaten...) berechnet.
 Allgemeine Bedienungshinweise:
 Vor jeder Messung müssen die relevanten Parameter (Uebersetzungen, gefahrener Gang...) definiert werden, dies erfolgt im Menüpunkt 'Edit Setup':
-<img alt="" src="/user/pages/uploads/bilder/bpr/edit.png?g-007d4908" /></p>
+<img alt="" src="/uploads/bilder/bpr/edit.png?g-007d4908" /></p>
 <p>Einmal hier eingestellte Parameter bleiben solange erhalten, bis sie geändert werden, darüberhinaus werden diese beim Progragrammende gespeichert und beim nächsten Start automatisch eingelesen, sodass sie nicht immer wieder neu eingegeben werden müssen (Sessionmanagement). Die Einstellungsdatei hierzu heisst bpr.ini, folgt in ihrem Aufbau dem bekannten Standard für .ini Dateien und kann mittels Texteditor bearbeitet werden.<br />
 Zusätzlich können Vorlagen dieser Datei (z.B. für verschiedene Motoren) unter anderem Namen gespeichert und später eingelesen/direkt verwendet werden ('Load Setup from').
 Die eigentliche Messung wird mittels Menüpunkt 'Start' aktiviert:</p>
-<p><img alt="" src="/user/pages/uploads/bilder/bpr/start.png?g-007d4908" /></p>
+<p><img alt="" src="/uploads/bilder/bpr/start.png?g-007d4908" /></p>
 <p>hierbei wird, falls die unter 'Setup' eingestellte Startdrehzahl grösser 0 ist, zunächst ein 'virtueller Drehzahlmesser' aktiviert, der die aktuelle Motordrehzahl anzeigt.
 Erst wenn diese überschritten wird, beginnt der eigentliche Messvorgang. Dies hat den Vorteil, dass man die Anlage einfacher allein bedienen kann (d.h. man kann am PC die Messung starten und dann erst am Prüfstand den Motor bedienen).
 Während der Messung werden keine Ergebnisse angezeigt, allerdings kann man den Fortschritt der Messung an der Anzahl der aktuell erfassten Impulse verfolgen, die Messung ist beendet, wenn die voreingestellte Impulszahl erreicht ist. Die Messung kann allerdings jederzeit durch die 'esc' Taste abgebrochen werden, was auch automatisch dann passiert, wenn nach Ablauf der unter 'Timeout' eingestellten Zeit nicht die voreingestellte Anzahl von Messwerten erreicht ist.

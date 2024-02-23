@@ -1,0 +1,29 @@
+ChangeLog fuer bpr.py:
+v 1.0.6:
+erste halbwegs vollstaendige Version, initial import in svn
+
+neu in v1.0.7:
+Erzeugen eines .dat/.asc File Paares aus wav/ini File (CreateDiademFiles = True in bpr.ini) - dies spart erheblich Speicherplatz, da wav Files sehr gross sind,
+zusaetzlich wird die Gefahr von Auswertefehlern verringert da im .dat File immer die richtigen Messparameter stehen.
+Weitere Verbesserung: zip .asc File zur weiteren Speicherplatzoptimierung, automatisch unzip beim Einlesen (compressData = True).
+
+neu in v1.0.8:
+Direkter Aufruf des Messprogramms (Soundrecorder) aus GUI moeglich: Start->Start Soundrecorder.
+Das Programm (Name + ggf. Pfad) kann via [Setup] Soundrecorder = xyz bzw. im GUI (Start->Select Soundrecorder) eingestellt werden Defaultwert 
+f. linux ist kwave, f. windoze sndrec32.exe (nicht sicher obs das auf allen versionen gibt :)
+
+neu in v1.0.9:
+Optional Anzeige des Drehzahlverlaufs ueber der Zeit (also die eigentlichen Messdaten) - nur mit MatPlotLib Graphik.
+Im AnalyseMenu kann nun ein Zeitfenster (min - max) zur Auswertung vorgegeben werden, z.B. fuer Messungen die mehrere Hochlaeufe
+beinhalten.
+
+neu in v1.0.10:
+GUI f. (Mess-)Parameter, svn Tag svn://localhost/python/bpr_v1.0.10 - alte TeilGUIs (GraphParm, AnalysisParm) noch vorhanden
+
+neu in v1.0.11 (26.03.15):
+(wieder svn trunk) - nur noch ein Menu f. alle Parameter (AllParam), discard GraphParam, AnalysisParam,
+generate ini File aus GUI (AllParam())  
+
+neu in v1.0.12 (27.03.15):
+Help/Doku html via webbrowser Modul einbinden,
+Korrektur = f(Temp./Luftdruck) einberechnen und in .dat File speichern/lesen
