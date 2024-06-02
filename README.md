@@ -1,7 +1,8 @@
 ## wernerjoss.github.io
 
 This is an incomplete Clone of my Grav Website at [https://hoernerfranzracing.de/werner/](https://hoernerfranzracing.de/werner/).  
-It is intended as an exercise of how to create a static Site out of an existing [Grav](https://getgrav.org) Installation, currently done via the [Blackhole Plugin](https://github.com/barryanders/grav-plugin-blackhole).
+It is intended as an exercise of how to create a static Site out of an existing [Grav](https://getgrav.org) Installation, currently done via the [Blackhole Plugin](https://github.com/barryanders/grav-plugin-blackhole).  
+Note that this Clone has only be in Sync (except Pictures) up to February 2024, there will be no further Updates !
 
 ## Note:
 The Folder 'images' here is taken from the local docker Installation, it may NOT be the one from the Live-Site !!  
